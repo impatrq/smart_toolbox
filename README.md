@@ -6,3 +6,6 @@
 
 # ¿Cómo funciona?
 
+# Contacto
+
+# Integrantes
