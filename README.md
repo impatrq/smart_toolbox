@@ -9,3 +9,4 @@
 # Contacto
 
 # ¿Quiénes somos?
+Somos un grupo de alumnos de E.E.S.T. N°7 "Taller Regional Quilmes" (IMPA)
