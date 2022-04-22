@@ -2,3 +2,7 @@
 
 # ¿Qué es Smart Toolbox?
 
+# ¿De donde surje Smart Toolbox?
+
+# ¿Cómo funciona?
+
