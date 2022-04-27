@@ -1,6 +1,7 @@
 # 722B_smart_toolbox
 
 # ¿Qué es Smart Toolbox?
+Smart Toolbox, es un producto que ofrecemos para brindar un nuevo sistema de orden y seguimiento de herramientas en el espacio de trabajo, para asi prevenir accidentes o perdidas de dinoe en bienes laborales. Tambien poseera una lista de actividades que le brindara al trabajador una mayor comodidad, ademas de reducir el margen de error por un olvido.
 
 # ¿De donde surje Smart Toolbox?
 
