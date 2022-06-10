@@ -2,6 +2,8 @@
 
 # Smart Toolbox
 
+<img src="https://user-images.githubusercontent.com/80338247/173057945-56e8957a-e7cb-4a4a-8875-fc8df34f5d9c.png" height="300" width="300" />
+
 </div>
 
 # ¿Qué es Smart Toolbox?
