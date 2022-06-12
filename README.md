@@ -2,7 +2,7 @@
 
 # Smart Toolbox
 
-<img src="https://user-images.githubusercontent.com/80327788/173078900-90000f04-d6a3-4c6a-8570-99d33b1d1c0c.mp4" height="400" width="400" />
+<img src="https://user-images.githubusercontent.com/80338247/173163056-207437dd-871c-47f4-98b3-e979bbbc1de7.gif" height="400" width="400" />
 
 </div>
 
