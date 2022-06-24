@@ -26,7 +26,7 @@ Después de terminar la jornada de trabajo, el operario deberá guardar todas la
 
 # ¿Quiénes somos?
 
-Somos un grupo de alumnos de E.E.S.T. N°7 "Taller Regional Quilmes" (IMPA)
+Somos un grupo de alumnos de E.E.S.T. N°7 "Taller Regional Quilmes" (IMPA).
 
 # Integrantes
 
