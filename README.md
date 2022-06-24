@@ -35,7 +35,7 @@ Somos un grupo de alumnos de E.E.S.T. N°7 "Taller Regional Quilmes" (IMPA).
 ### - Herrera, Lucas
 📧Email: lucassherreraa2003@gmail.com
 ### - Mariani, Ramiro
-📧Email:
+📧Email: ramiromariani99@gmail.com
 ### - Martínez, Joaquín
 📧Email: joaquinosmartinez@gmail.com
 ### - Torres, Federico
