@@ -30,12 +30,18 @@ Somos un grupo de alumnos de E.E.S.T. N°7 "Taller Regional Quilmes" (IMPA)
 
 # Integrantes
 
-- Esquivel, Agustín
-- Herrera, Lucas
-- Mariani, Ramiro
-- Martínez, Joaquín
-- Torres, Federico
-- Vanore, Miqueas
+## - Esquivel, Agustín
+📧Email: Esquivel.Agustin04@gmail.com
+## - Herrera, Lucas
+📧Email: lucassherreraa2003@gmail.com
+## - Mariani, Ramiro
+📧Email:
+## - Martínez, Joaquín
+📧Email: joaquinosmartinez@gmail.com
+## - Torres, Federico
+📧Email: federicotorres233@protonmail.com
+## - Vanore, Miqueas 
+📧Email: vnmiqueas@gmail.com
 
 # Logros
 
