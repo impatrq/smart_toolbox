@@ -26,21 +26,21 @@ Después de terminar la jornada de trabajo, el operario deberá guardar todas la
 
 # ¿Quiénes somos?
 
-Somos un grupo de alumnos de E.E.S.T. N°7 "Taller Regional Quilmes" (IMPA)
+Somos un grupo de alumnos de E.E.S.T. N°7 "Taller Regional Quilmes" (IMPA).
 
 # Integrantes
 
-## - Esquivel, Agustín
+### - Esquivel, Agustín
 📧Email: Esquivel.Agustin04@gmail.com
-## - Herrera, Lucas
+### - Herrera, Lucas
 📧Email: lucassherreraa2003@gmail.com
-## - Mariani, Ramiro
+### - Mariani, Ramiro
 📧Email:
-## - Martínez, Joaquín
+### - Martínez, Joaquín
 📧Email: joaquinosmartinez@gmail.com
-## - Torres, Federico
+### - Torres, Federico
 📧Email: federicotorres233@protonmail.com
-## - Vanore, Miqueas 
+### - Vanore, Miqueas 
 📧Email: vnmiqueas@gmail.com
 
 # Logros
