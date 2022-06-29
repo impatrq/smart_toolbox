@@ -1,0 +1,7 @@
+{
+  "name": "smarttoolboxapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
