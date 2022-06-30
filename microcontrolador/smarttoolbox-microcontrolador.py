@@ -16,8 +16,13 @@ HTTP_HEADERS = {'Content-Type': 'application/json'}
 wifi_essid = ''
 wifi_pass = ''
 
+area_trabajo = "sector1"
+
+# DB Url Id
+dbId = ""
+
 # DB Url
-dbURL = ""
+dbURL = f"https://smart-toolbox-{dbId}-default-rtdb.firebaseio.com"
 
 # Connect to wifi
 def conectarWifi():
