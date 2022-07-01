@@ -1,6 +1,8 @@
 # Smart Toolbox Esp32 main program
 #
 # Github: https://github.com/impatrq/722B_smart_toolbox
+#
+# Author: https://github.com/FedericoTorres233
 
 import urequests as ureq
 from machine import Pin
@@ -14,8 +16,13 @@ HTTP_HEADERS = {'Content-Type': 'application/json'}
 wifi_essid = ''
 wifi_pass = ''
 
+area_trabajo = "sector1"
+
+# DB Url Id
+dbId = ""
+
 # DB Url
-dbURL = ""
+dbURL = f"https://smart-toolbox-{dbId}-default-rtdb.firebaseio.com"
 
 # Connect to wifi
 def conectarWifi():
@@ -28,6 +35,15 @@ def conectarWifi():
             pass
     print('network config:', wlan.ifconfig())
 
-conectarWifi()
 
-ureq.patch(dbURL,json={"herramienta1":"true"}, headers=HTTP_HEADERS)
+def getReq(param):
+    return ureq.get(f"{dbURL}/{area_trabajo}/{param}.json", headers=HTTP_HEADERS).json()
+
+conectarWifi() # Connects to the Wifi network
+
+while not getReq("guardar"):
+    time.sleep(5) # Waits until the "guardar" signal arrives
+
+#ureq.patch(dbURL,json={"1":"2"}, headers=HTTP_HEADERS)
+
+print("guardar ha cambiado a true")
