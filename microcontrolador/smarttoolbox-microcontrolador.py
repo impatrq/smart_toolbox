@@ -24,6 +24,13 @@ dbId = ""
 # DB Url
 dbURL = f"https://smart-toolbox-{dbId}-default-rtdb.firebaseio.com"
 
+
+# Tools constructor
+class Herramientas():
+    def __init__(self,pin,estado):
+        self.pin = pin
+        self.estado = estado
+
 # Connect to wifi
 def conectarWifi():
     wlan = network.WLAN(network.STA_IF)
