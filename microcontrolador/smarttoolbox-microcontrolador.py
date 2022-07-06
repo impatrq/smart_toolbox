@@ -57,6 +57,10 @@ lupa = Herramientas(15,False)
 
 # * cajon1 = [pinza_fuerza,pinza_punta_1,pinza_punta_2,pinza_frenar,pinza_loro,alicates]
 
+# ! No se pueden asignar los pines hasta que
+# ! todas las herramientas esten organizadas
+# ! en el cajon
+
 # Connect to wifi
 def conectarWifi():
     wlan = network.WLAN(network.STA_IF)
