@@ -1,0 +1,10 @@
+.textApp{
+    align-items: center;
+    color: blue;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.checkBox{
+    background: red;
+    border-style: double;
+}
