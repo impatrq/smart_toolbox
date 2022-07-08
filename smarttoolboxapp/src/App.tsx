@@ -11,9 +11,9 @@ import {
 } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
 import { ellipse, square, triangle } from "ionicons/icons";
-import Tareas from "./pages/Tareas";
-import Herramientas from "./pages/Herramientas";
-import Caja from "./pages/Caja";
+import Tareas from "./pages/Tareas/Tareas"
+import Herramientas from "./pages/Herramientas/Herramientas";
+import Caja from "./pages/Caja/Caja";
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
