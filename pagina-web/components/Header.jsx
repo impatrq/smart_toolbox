@@ -1,5 +1,6 @@
 import { ParallaxLayer } from "@react-spring/parallax";
 import classes from "../styles/Header.module.css";
+import Navigate from "./Navigate";
 
 export default function Header() {
   return (
@@ -26,7 +27,9 @@ export default function Header() {
           />
         </div>
       </ParallaxLayer>
-      <ParallaxLayer speed={5}></ParallaxLayer>
+      <ParallaxLayer speed={5}>
+        <Navigate />
+      </ParallaxLayer>
     </>
   );
 }
