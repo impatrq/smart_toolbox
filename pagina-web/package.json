@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-spring/parallax": "^9.5.1",
     "bootstrap": "^5.1.3",
     "next": "12.2.0",
     "react": "18.2.0",

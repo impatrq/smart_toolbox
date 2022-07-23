@@ -1,7 +1,10 @@
-import Image from 'next/image'
+import { Parallax } from "@react-spring/parallax";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <div>Pagina inicial</div>
-  )
+    <>
+      <Parallax pages={3} horizontal></Parallax>
+    </>
+  );
 }
