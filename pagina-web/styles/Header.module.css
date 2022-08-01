@@ -10,8 +10,10 @@
   z-index: -1;
 }
 
-@media (max-width: 750px) {
-    .backgroundvideo {
-      display: none;
-    }
+.main {
+  height: 80%;
+}
+
+.navigate {
+  height: 5%;
 }
