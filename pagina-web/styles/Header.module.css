@@ -1,0 +1,19 @@
+.backgroundvideo {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.main {
+  height: 80%;
+}
+
+.navigate {
+  height: 5%;
+}
