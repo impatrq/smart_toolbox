@@ -1,9 +1,8 @@
 import { ParallaxLayer } from "@react-spring/parallax";
 import classes from "../styles/SocialSection.module.css";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import YouTubeIcon from "@mui/icons-material/YouTube";
 import EmailIcon from "@mui/icons-material/Email";
-import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { Row, Col } from "react-bootstrap";
 
 export default function SocialSection() {
@@ -18,32 +17,25 @@ export default function SocialSection() {
     <>
       <ParallaxLayer offset={2} speed={1.5} className={classes.redes}>
         <Row>
-          <h1 className="display-1 text-white fw-normal">Redes Sociales</h1>
+          <h1 className="display-1 text-white fw-bold">Redes Sociales</h1>
         </Row>
-        <Row className={classes.iconCol}>
+        <Row>
           <Col className="mx-3">
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://github.com/hermes-cansat"
+              href="https://github.com/impatrq/722b_smart_toolbox"
             >
               <GitHubIcon htmlColor="#4b4d6e" sx={sx} fontSize="large" />
             </a>
           </Col>
           <Col className="mx-3">
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="mailto:hermes-cansat@proton.me"
-            >
+            <a target="_blank" rel="noreferrer" href="Smart.Toolbox@proton.me">
               <EmailIcon htmlColor="#4b4d6e" sx={sx} fontSize="large" />
             </a>
           </Col>
           <Col className="mx-3">
-            <YouTubeIcon htmlColor="#4b4d6e" sx={sx} fontSize="large" />
-          </Col>
-          <Col className="mx-3">
-            <InstagramIcon htmlColor="#4b4d6e" sx={sx} fontSize="large" />
+            <LinkedInIcon htmlColor="#4b4d6e" sx={sx} fontSize="large" />
           </Col>
         </Row>
       </ParallaxLayer>
