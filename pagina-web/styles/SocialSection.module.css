@@ -1,8 +1,10 @@
 .redes {
   display: grid;
   place-items: center;
-  background-color: #1b1d2e;
+  background-color: #1b1d2e6b;
   box-shadow: 0px 0px 15px black;
+  padding-top: 15rem;
+  padding-bottom: 15rem;
 }
 
 .iconRow {

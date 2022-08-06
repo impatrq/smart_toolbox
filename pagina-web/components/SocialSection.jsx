@@ -7,9 +7,10 @@ import { Row, Col } from "react-bootstrap";
 
 export default function SocialSection() {
   const sx = {
-    fontSize: "5rem",
+    fontSize: "5.5rem",
     "&:hover": {
       width: "10rem",
+      scale: "120%",
     },
     transition: "all 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
   };
@@ -21,21 +22,21 @@ export default function SocialSection() {
         </Row>
         <Row>
           <Col className="mx-3">
+            <a href="mailto:Smart.Toolbox@proton.me">
+              <EmailIcon htmlColor="#ffffffb3" sx={sx} fontSize="large" />
+            </a>
+          </Col>
+          <Col className="mx-3">
             <a
               target="_blank"
               rel="noreferrer"
               href="https://github.com/impatrq/722b_smart_toolbox"
             >
-              <GitHubIcon htmlColor="#4b4d6e" sx={sx} fontSize="large" />
+              <GitHubIcon htmlColor="#ffffffb3" sx={sx} fontSize="large" />
             </a>
           </Col>
           <Col className="mx-3">
-            <a target="_blank" rel="noreferrer" href="Smart.Toolbox@proton.me">
-              <EmailIcon htmlColor="#4b4d6e" sx={sx} fontSize="large" />
-            </a>
-          </Col>
-          <Col className="mx-3">
-            <LinkedInIcon htmlColor="#4b4d6e" sx={sx} fontSize="large" />
+            <LinkedInIcon htmlColor="#ffffffb3" sx={sx} fontSize="large" />
           </Col>
         </Row>
       </ParallaxLayer>
