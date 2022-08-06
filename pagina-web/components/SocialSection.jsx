@@ -1,12 +1,12 @@
 import { ParallaxLayer } from "@react-spring/parallax";
-export default function SocialSection() {
+import classes from "../styles/SocialSection.module.css";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import EmailIcon from "@mui/icons-material/Email";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { Row, Col } from "react-bootstrap";
 
-export default function SocialMainPage() {
+export default function SocialSection() {
   const sx = {
     fontSize: "5rem",
     "&:hover": {
