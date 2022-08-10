@@ -26,3 +26,6 @@ yarn-error.log*
 
 # Optional eslint cache
 .eslintcache
+
+# firebase
+firebase.js
