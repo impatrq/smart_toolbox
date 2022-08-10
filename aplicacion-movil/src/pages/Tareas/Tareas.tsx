@@ -11,15 +11,11 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ref, onValue } from "firebase/database";
-import { db } from "../../firebase.js";
+import db from "../../firebase.js";
 
-const checkboxList = [
-  { val: "Tarea 1", isChecked: false },
-  { val: "Tarea 2", isChecked: false },
-  { val: "Tarea 3", isChecked: false },
-];
+const checkboxList: Array<{ val: String; isChecked: boolean }> = [];
 
 const Tareas: React.FC = () => {
   const [list, setList] = useState(checkboxList);
@@ -31,16 +27,21 @@ const Tareas: React.FC = () => {
     setList(lista);
   };
 
-  const persona = "p1";
+  useEffect(() => {
+    const persona = "p1";
 
-  const starCountRef = ref(db, "sector1/personas/" + persona + "/tareas");
-  onValue(starCountRef, (snapshot) => {
-    const data = snapshot.val();
-    console.log(
-      data.split(/\|/gi).map((i: String) => i.replace(/^\s+|\s+$/gi, "")).map((i:String)=>{return {val:i,isChecked:false}}),
-      
-    );
-  });
+    const starCountRef = ref(db, "sector1/personas/" + persona + "/tareas");
+    onValue(starCountRef, (snapshot) => {
+      const raw_data = snapshot.val();
+      const data = raw_data
+        .split(/\|/gi)
+        .map((i: String) => i.replace(/^\s+|\s+$/gi, ""))
+        .map((i: String) => {
+          return { val: i, isChecked: false };
+        });
+      setList(data);
+    });
+  }, []);
 
   return (
     <IonPage>
