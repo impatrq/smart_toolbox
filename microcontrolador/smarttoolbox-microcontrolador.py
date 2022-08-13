@@ -97,8 +97,27 @@ while True:
         time.sleep(60) # Waits until the "guardar" signal arrives
     contact = 0
     while not contact > 2:
-        if contact1.value():
-            # Turn on switches
-            pass
-        else:
-            contact += 1
+
+        if contact == 0:
+            if contact0.value():
+                selector = 0
+                while selector < 15:
+                    selector += 1
+            else:
+                contact += 1
+
+        elif contact1 == 1:
+            if contact1.value():
+                selector = 0
+                while selector < 15:
+                    selector += 1
+            else:
+                contact += 1
+
+        elif contact2 == 2:
+            if contact2.value():
+                selector = 0
+                while selector < 15:
+                    selector += 1
+            else:
+                contact += 1
