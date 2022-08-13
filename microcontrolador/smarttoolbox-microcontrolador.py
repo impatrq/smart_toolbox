@@ -82,9 +82,17 @@ def getReq(param):
 
 conectarWifi() # Connects to the Wifi network
 
-while not getReq("guardar"):
-    time.sleep(5) # Waits until the "guardar" signal arrives
-
 #ureq.patch(dbURL,json={"1":"2"}, headers=HTTP_HEADERS)
 
 print("guardar ha cambiado a true")
+
+while True:
+    while not getReq("guardar"):
+        time.sleep(60) # Waits until the "guardar" signal arrives
+    contact = 0
+    while not contact > 2:
+        if contact1.value():
+            # Turn on switches
+            pass
+        else:
+            contact += 1
