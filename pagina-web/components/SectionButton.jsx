@@ -5,9 +5,8 @@ export default function SectionButton({ variant, text }) {
     <Button
       size="lg"
       className="container-fluid my-5 h-50 fw-bold"
-      style={{ "font-size": "1rem"}}
+      style={{ "font-size": "1rem" }}
       variant={variant}
-      disabled={text == "Materiales"}
     >
       {text}
     </Button>
