@@ -35,33 +35,34 @@ linea3 = Pin(14, Pin.OUT)
 
 # Tools constructor
 class Herramientas():
-    def __init__(self,pin,estado):
-        self.pin = pin
+    def __init__(self,sel,estado,linea):
+        self.sel = sel
         self.estado = estado
+        self.linea = linea
 
 # Tools objects
-pinza_fuerza = Herramientas(0,False)
-pinza_punta_1 = Herramientas(1,False)
-pinza_punta_2 = Herramientas(2,False)
-pinza_frenar = Herramientas(3,False)
-pinza_loro = Herramientas(4,False)
-alicates = Herramientas(5,False)
-dest_plano_1 = Herramientas(6,False)
-dest_plano_2 = Herramientas(7,False)
-dest_phillips_1 = Herramientas(8,False)
-dest_phillips_2 = Herramientas(9,False)
-cricket = Herramientas(10,False)
+pinza_fuerza = Herramientas([0,0,0,0],False)
+pinza_punta_1 = Herramientas([0,0,0,0],False)
+pinza_punta_2 = Herramientas([0,0,0,0],False)
+pinza_frenar = Herramientas([0,0,0,0],False)
+pinza_loro = Herramientas([0,0,0,0],False)
+alicates = Herramientas([0,0,0,0],False)
+dest_plano_1 = Herramientas([0,0,0,0],False)
+dest_plano_2 = Herramientas([0,0,0,0],False)
+dest_phillips_1 = Herramientas([0,0,0,0],False)
+dest_phillips_2 = Herramientas([0,0,0,0],False)
+cricket = Herramientas([0,0,0,0],False)
 # ! Llaves combinadas
 # ! Tubos de encastre de 1/4
 # ! Tubos de encastre de 1/4
 # ! Tubos de encastre de 3/8
 # ! Puntas intercambiables
 # ! Extensiones llaves cricket
-multimetro = Herramientas(11,False)
-remachadora = Herramientas(12,False)
-minitorno = Herramientas(13,False)
-linterna = Herramientas(14,False)
-lupa = Herramientas(15,False)
+multimetro = Herramientas([0,0,0,0],False)
+remachadora = Herramientas([0,0,0,0],False)
+minitorno = Herramientas([0,0,0,0],False)
+linterna = Herramientas([0,0,0,0],False)
+lupa = Herramientas([0,0,0,0],False)
 
 # * cajon1 = [pinza_fuerza,pinza_punta_1,pinza_punta_2,pinza_frenar,pinza_loro,alicates]
 
