@@ -35,36 +35,37 @@ linea3 = Pin(14, Pin.OUT)
 
 # Tools constructor
 class Herramientas():
-    def __init__(self,sel,estado,linea):
+    def __init__(self,num,sel,estado,linea):
+        self.num = num
         self.sel = sel
         self.estado = estado
         self.linea = linea
 
 # Tools objects
-pinza_fuerza = Herramientas([0,0,0,0],False)
-pinza_punta_1 = Herramientas([0,0,0,0],False)
-pinza_punta_2 = Herramientas([0,0,0,0],False)
-pinza_frenar = Herramientas([0,0,0,0],False)
-pinza_loro = Herramientas([0,0,0,0],False)
-alicates = Herramientas([0,0,0,0],False)
-dest_plano_1 = Herramientas([0,0,0,0],False)
-dest_plano_2 = Herramientas([0,0,0,0],False)
-dest_phillips_1 = Herramientas([0,0,0,0],False)
-dest_phillips_2 = Herramientas([0,0,0,0],False)
-cricket = Herramientas([0,0,0,0],False)
+pinza_fuerza = Herramientas(0,[0,0,0,0],False,1)
+pinza_punta_1 = Herramientas(1,[0,0,0,0],False,1)
+pinza_punta_2 = Herramientas(2,[0,0,0,0],False,1)
+pinza_frenar = Herramientas(3,[0,0,0,0],False,1)
+pinza_loro = Herramientas(4,[0,0,0,0],False,1)
+alicates = Herramientas(5,[0,0,0,0],False,1)
+dest_plano_1 = Herramientas(6,[0,0,0,0],False,1)
+dest_plano_2 = Herramientas(7,[0,0,0,0],False,1)
+dest_phillips_1 = Herramientas(8,[0,0,0,0],False,1)
+dest_phillips_2 = Herramientas(9,[0,0,0,0],False,1)
+cricket = Herramientas(10,[0,0,0,0],False,1)
 # ! Llaves combinadas
 # ! Tubos de encastre de 1/4
 # ! Tubos de encastre de 1/4
 # ! Tubos de encastre de 3/8
 # ! Puntas intercambiables
 # ! Extensiones llaves cricket
-multimetro = Herramientas([0,0,0,0],False)
-remachadora = Herramientas([0,0,0,0],False)
-minitorno = Herramientas([0,0,0,0],False)
-linterna = Herramientas([0,0,0,0],False)
-lupa = Herramientas([0,0,0,0],False)
+#multimetro = Herramientas([0,0,0,0],False)
+#remachadora = Herramientas([0,0,0,0],False)
+#minitorno = Herramientas([0,0,0,0],False)
+#linterna = Herramientas([0,0,0,0],False)
+#lupa = Herramientas([0,0,0,0],False)
 
-# * cajon1 = [pinza_fuerza,pinza_punta_1,pinza_punta_2,pinza_frenar,pinza_loro,alicates]
+cajon1 = [pinza_fuerza,pinza_punta_1,pinza_punta_2,pinza_frenar,pinza_loro,alicates]
 
 # ! No se pueden asignar los pines hasta que
 # ! todas las herramientas esten organizadas
