@@ -23,7 +23,7 @@ export default function Header() {
           <div className="opacity-75 h-75" style={{ display: "grid", "place-items": "center" }}>
             <img
               className="img-fluid h-auto"
-              src={"/LogoSinFondo.png"}
+              src={"/LogoSinFondo1.png"}
               alt="logo"
             />
           </div>
