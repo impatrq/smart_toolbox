@@ -25,9 +25,13 @@ dbId = ""
 dbURL = f"https://smart-toolbox-{dbId}-default-rtdb.firebaseio.com"
 
 # I/O ports
-contact1 = Pin(13,Pin.IN)
-contact2 = Pin(14,Pin.IN)
-contact3 = Pin(15,Pin.IN)
+contact0 = Pin(25,Pin.IN)
+contact1 = Pin(26,Pin.IN)
+contact2 = Pin(27,Pin.IN)
+
+linea1 = Pin(12, Pin.OUT)
+linea2 = Pin(13, Pin.OUT)
+linea3 = Pin(14, Pin.OUT)
 
 # Tools constructor
 class Herramientas():
