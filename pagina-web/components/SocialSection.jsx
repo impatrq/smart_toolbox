@@ -7,9 +7,8 @@ import { Row, Col } from "react-bootstrap";
 
 export default function SocialSection() {
   const sx = {
-    fontSize: "5.5rem",
+    fontSize: "5.5em",
     "&:hover": {
-      width: "10rem",
       scale: "120%",
     },
     transition: "all 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
@@ -17,16 +16,16 @@ export default function SocialSection() {
   return (
     <>
       <ParallaxLayer offset={2} speed={1.5} className={classes.redes}>
-        <Row>
+        <Row className="text-center">
           <h1 className="display-1 text-white fw-bold">Redes Sociales</h1>
         </Row>
         <Row>
-          <Col className="mx-3">
+          <Col className="text-center mx-3" style={{ width: "100%",height: "auto"}}>
             <a href="mailto:Smart.Toolbox@proton.me">
               <EmailIcon htmlColor="#ffffffb3" sx={sx} fontSize="large" />
             </a>
           </Col>
-          <Col className="mx-3">
+          <Col className="text-center mx-3">
             <a
               target="_blank"
               rel="noreferrer"
@@ -35,7 +34,7 @@ export default function SocialSection() {
               <GitHubIcon htmlColor="#ffffffb3" sx={sx} fontSize="large" />
             </a>
           </Col>
-          <Col className="mx-3">
+          <Col className="text-center mx-3">
             <LinkedInIcon htmlColor="#ffffffb3" sx={sx} fontSize="large" />
           </Col>
         </Row>

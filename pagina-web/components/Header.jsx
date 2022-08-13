@@ -20,9 +20,9 @@ export default function Header() {
         <div className={classes.main}>
           <h2 className="pt-5 display-5 fw-bold">Te damos la bienvenida a</h2>
           <h1 className="display-1 fw-bold">Smart Toolbox</h1>
-          <div className="opacity-75 h-75">
+          <div className="opacity-75 h-75" style={{ display: "grid", "place-items": "center" }}>
             <img
-              className="img-fluid h-100"
+              className="img-fluid h-auto"
               src={"/LogoSinFondo.png"}
               alt="logo"
             />
