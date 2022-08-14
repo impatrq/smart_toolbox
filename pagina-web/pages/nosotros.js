@@ -1,7 +1,12 @@
-import NavBar from '../components/Navbar'
+import NavBar from "../components/NavBar";
 
 export default function nosotros() {
   return (
-    <NavBar/>
-  )
+    <>
+      <NavBar />
+      <div className="bg-none text-white fs-1">
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      </div>
+    </>
+  );
 }

@@ -1,7 +1,5 @@
-import NavBar from '../components/Navbar'
+import NavBar from "../components/NavBar";
 
 export default function nosotros() {
-  return (
-    <NavBar/>
-  )
+  return <NavBar />;
 }
