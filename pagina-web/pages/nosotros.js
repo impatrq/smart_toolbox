@@ -69,13 +69,11 @@ export default function nosotros() {
           />
         </Row>
       </div>
-      <div className="grid place-items-center my-16">
+      <div className="grid place-items-center my-16 px-5">
         <h1 className="text-white my-7">¡Nuestra Escuela!</h1>
         <iframe
-          className="rounded-xl"
+          className="rounded-xl w-full md:w-1/2 sm:h-96"
           src="https://maps.google.com/maps?width=720&amp;height=600&amp;hl=es&amp;q=Av.%20Otamendi,%20B1878%20Quilmes,%20Provincia%20de%20Buenos%20Aires+(IMPA)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-          width="600"
-          height="450"
           allowFullscreen=""
           loading="lazy"
         ></iframe>
