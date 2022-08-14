@@ -1,9 +1,11 @@
 import Link from "next/link";
-import { Nav, Navbar, Container } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
 
 export default function NavBar() {
   return (
-    <Navbar bg="dark" variant="dark">
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
         <Navbar.Brand>
           <Link href={"/"}>
@@ -18,11 +20,11 @@ export default function NavBar() {
           </Link>{" "}
           Smart Toolbox
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link>
-              <Link href={"/"} >Inicio</Link>
+              <Link href={"/"}>Inicio</Link>
             </Nav.Link>
 
             <Nav.Link>
