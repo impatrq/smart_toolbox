@@ -76,7 +76,7 @@ export default function nosotros() {
           src="https://maps.google.com/maps?width=720&amp;height=600&amp;hl=es&amp;q=Av.%20Otamendi,%20B1878%20Quilmes,%20Provincia%20de%20Buenos%20Aires+(IMPA)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
           width="600"
           height="450"
-          allowfullscreen=""
+          allowFullscreen=""
           loading="lazy"
         ></iframe>
       </div>
