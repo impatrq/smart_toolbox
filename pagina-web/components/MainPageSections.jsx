@@ -12,24 +12,40 @@ export default function SectionsMainPage() {
     <>
       <ParallaxLayer
         offset={1}
-        speed={1.5}
+        speed={2}
         style={{ display: "grid", "place-items": "center" }}
       >
         <Container>
           <Row>
-            <Col style={buttonStyle}>
-              <SectionButton variant="outline-primary" text="¿Cómo funciona?" />
+            <Col className="mx-2" style={buttonStyle}>
+              <SectionButton
+                variant="outline-primary"
+                text="¿Cómo funciona?"
+                link={"/funcionamiento"}
+              />
             </Col>
-            <Col style={buttonStyle}>
-              <SectionButton variant="outline-success" text="¿Quiénes somos?" />
+            <Col className="mx-2" style={buttonStyle}>
+              <SectionButton
+                variant="outline-success"
+                text="¿Quiénes somos?"
+                link={"/nosotros"}
+              />
             </Col>
           </Row>
           <Row>
-            <Col style={buttonStyle}>
-              <SectionButton variant="outline-light" text="Planos y circuitos" />
+            <Col className="mx-2" style={buttonStyle}>
+              <SectionButton
+                variant="outline-light"
+                text="Planos y circuitos"
+                link={"/circuitos"}
+              />
             </Col>
-            <Col style={buttonStyle}>
-              <SectionButton variant="outline-warning" text="Materiales" />
+            <Col className="mx-2" style={buttonStyle}>
+              <SectionButton
+                variant="outline-warning"
+                text="Materiales"
+                link={"/materiales"}
+              />
             </Col>
           </Row>
         </Container>

@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -8,8 +12,17 @@ body {
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+  color: rgb(199, 208, 216) !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  scale: 110%;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -moz-transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -ms-transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -o-transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 * {
