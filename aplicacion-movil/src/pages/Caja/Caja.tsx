@@ -2,21 +2,34 @@ import {
   IonButton,
   IonContent,
   IonHeader,
-  IonItem,
-  IonLabel,
-  IonList,
   IonPage,
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
 import { BarcodeScanner } from "@awesome-cordova-plugins/barcode-scanner";
 import "./Caja.css";
+import { update } from "firebase/database";
+import db from "../../firebase.js";
+import { useState } from "react";
 
 const Caja: React.FC = () => {
+
+  const [code, setCode] = useState("")
   const openScanner = async () => {
     const data = await BarcodeScanner.scan();
-    console.log(`Barcode data: ${data.text}`);
+    setCode(data.text)
   };
+
+// const Update = () => {
+    
+
+//       const postData = {
+//         uid: uid,
+//       };
+
+//       const newUpdateKey = update(uid)
+
+//   };
 
   return (
     <IonPage>
@@ -31,6 +44,7 @@ const Caja: React.FC = () => {
           <IonToolbar>
             <IonTitle size="large">Caja</IonTitle>
           </IonToolbar>
+          <IonTitle>{code}</IonTitle>
         </IonHeader>
       </IonContent>
     </IonPage>
