@@ -1,5 +1,5 @@
 import NavBar from "../components/NavBar";
 
-export default function nosotros() {
+export default function imagenes() {
   return <NavBar />;
 }

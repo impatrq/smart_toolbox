@@ -40,7 +40,7 @@ export default function NavBar() {
             </Nav.Link>
 
             <Nav.Link>
-              <Link href={"/materiales"}>Materiales</Link>
+              <Link href={"/imagenes"}>Imágenes</Link>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
