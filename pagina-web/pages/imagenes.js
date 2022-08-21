@@ -1,13 +1,25 @@
 import NavBar from "../components/NavBar";
 import fs from "fs";
 import path from "path";
+import Galeria from "../components/Galeria";
 
 export default function imagenes({ pictures }) {
-  console.log(pictures);
+  // const images = pictures.map((i) => `/pictures/${i}`);
+  const images = [
+    "/pictures/LogoSinFondo.png",
+    "/pictures/LogoSinFondo.png",
+    "/pictures/LogoSinFondo.png",
+    "/pictures/LogoSinFondo.png",
+    "/pictures/LogoSinFondo.png",
+    "/pictures/LogoSinFondo.png",
+  ];
   return (
-    <>
+    <div className="bg-[#130b10] min-h-screen">
       <NavBar />
-    </>
+      <div className="m-10">
+        <Galeria images={images} />
+      </div>
+    </div>
   );
 }
 
