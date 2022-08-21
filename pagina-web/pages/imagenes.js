@@ -4,15 +4,7 @@ import path from "path";
 import Galeria from "../components/Galeria";
 
 export default function imagenes({ pictures }) {
-  // const images = pictures.map((i) => `/pictures/${i}`);
-  const images = [
-    "/pictures/LogoSinFondo.png",
-    "/pictures/LogoSinFondo.png",
-    "/pictures/LogoSinFondo.png",
-    "/pictures/LogoSinFondo.png",
-    "/pictures/LogoSinFondo.png",
-    "/pictures/LogoSinFondo.png",
-  ];
+  const images = pictures.map((i) => `/pictures/${i}`);
   return (
     <div className="bg-[#130b10] min-h-screen">
       <NavBar />

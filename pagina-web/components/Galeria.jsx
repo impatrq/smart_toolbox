@@ -42,10 +42,15 @@ function GaleriaCard({ imageUrl, show }) {
       <div className="rounded-xl shadow-md absolute inset-0 z-10 flex transition duration-200 ease-in hover:opacity-0">
         <div className="rounded-xl absolute inset-0 bg-black opacity-70"></div>
         <div className="mx-auto text-white z-10 self-center uppercase tracking-widest text-sm">
-          {imageUrl == "/pictures/LogoSinFondo.png" ? "Foto 1" : null}
+          {imageUrl.replace(/\/pictures\//gi,"").replace(/\.jpg/gi,"")}
+          {/* {imageUrl == "/pictures/LogoSinFondo.png" ? "Foto 1" : null} */}
         </div>
       </div>
-      <img className="rounded-xl object-contain h-full w-full" src={"https://c4.wallpaperflare.com/wallpaper/911/492/963/arbol-naturaleza-paisajes-prado-wallpaper-preview.jpg"} alt="" />
+      <img
+        className="rounded-xl object-contain h-full w-full"
+        src={imageUrl}
+        alt=""
+      />
     </div>
   );
 }
