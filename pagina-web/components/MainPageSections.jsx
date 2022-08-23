@@ -43,8 +43,8 @@ export default function SectionsMainPage() {
             <Col className="mx-2" style={buttonStyle}>
               <SectionButton
                 variant="outline-warning"
-                text="Materiales"
-                link={"/materiales"}
+                text="Imágenes"
+                link={"/imagenes"}
               />
             </Col>
           </Row>
