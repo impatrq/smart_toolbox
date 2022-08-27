@@ -27,6 +27,9 @@ dbURL = f"https://smart-toolbox-{dbId}-default-rtdb.firebaseio.com"
 # Toolbox Number
 toolbox = "12537865"
 
+# Missing tools
+missing_tools = []
+
 # I/O ports
 contact0 = Pin(25,Pin.IN)
 contact1 = Pin(26,Pin.IN)
@@ -96,6 +99,9 @@ def conectarWifi():
 def getReq(param):
     return ureq.get(f"{dbURL}/{area_trabajo}/{param}.json", headers=HTTP_HEADERS).json()
 
+def patchReq(param, js):
+    return ureq.patch(f"{dbURL}/{area_trabajo}/{param}.json", json=js ,headers=HTTP_HEADERS).json()
+
 conectarWifi() # Connects to the Wifi network
 
 #ureq.patch(dbURL,json={"1":"2"}, headers=HTTP_HEADERS)
@@ -126,9 +132,11 @@ while True:
                 s3.on()
 
             if signal == 1:
-                tool.estado = True
+                missing_tools.append(tool.nombre)
+                patchReq(f"cajas/{toolbox}",{"missing_tools": " | ".join(missing_tools), "state": True})
             elif signal == 0:
-                tool.estado = False
+                missing_tools.remove(tool.nombre)
+                patchReq(f"cajas/{toolbox}",{"missing_tools": " | ".join(missing_tools), "state": True})
 
             s0.off()
             s1.off()
