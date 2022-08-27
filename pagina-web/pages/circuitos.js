@@ -29,7 +29,15 @@ export default function nosotros() {
             <li className="my-1">Un diodo para el relé</li>
             <li className="my-1">Resistencias varias</li>
           </ul>
-      
+          Fuera de la la placa de control principal se encuentran:
+          <ul className="my-2">
+            <li className="my-1">
+              Microswitches para la detección de herramientas
+            </li>
+            <li className="my-1">Contactos magnéticos</li>
+            <li className="my-1">Un buzzer 12V</li>
+            <li className="my-1">Una batería de 12VDC</li>
+          </ul>
         </h3>
         <h4 className="text-center my-7 text-white text-2xl">Planos</h4>
         <img className="rounded-lg img-fluid" src={"/circuito.jpg"} />
