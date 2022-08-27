@@ -95,29 +95,33 @@ print("guardar ha cambiado a true")
 while True:
     while not getReq("guardar"):
         time.sleep(60) # Waits until the "guardar" signal arrives
-    contact = 0
-    while not contact > 2:
 
-        if contact == 0:
-            if contact0.value():
-                selector = 0
-                while selector < 15:
-                    selector += 1
-            else:
-                contact += 1
+    if contact0.value():
+        pass
 
-        elif contact1 == 1:
-            if contact1.value():
-                selector = 0
-                while selector < 15:
-                    selector += 1
-            else:
-                contact += 1
+    # contact = 0
+    # while not contact > 2:
 
-        elif contact2 == 2:
-            if contact2.value():
-                selector = 0
-                while selector < 15:
-                    selector += 1
-            else:
-                contact += 1
+    #     if contact == 0:
+    #         if contact0.value():
+    #             selector = 0
+    #             while selector < 15:
+    #                 selector += 1
+    #         else:
+    #             contact += 1
+
+    #     elif contact1 == 1:
+    #         if contact1.value():
+    #             selector = 0
+    #             while selector < 15:
+    #                 selector += 1
+    #         else:
+    #             contact += 1
+
+    #     elif contact2 == 2:
+    #         if contact2.value():
+    #             selector = 0
+    #             while selector < 15:
+    #                 selector += 1
+    #         else:
+    #             contact += 1
