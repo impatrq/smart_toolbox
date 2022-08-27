@@ -7,7 +7,7 @@
 import urequests as ureq
 from machine import Pin
 import network
-import time
+from time import sleep_ms, sleep
 
 # Headers
 HTTP_HEADERS = {'Content-Type': 'application/json'}
@@ -92,7 +92,7 @@ def conectarWifi():
         print('connecting to network...')
         wlan.connect(wifi_essid, wifi_pass)
         while not wlan.isconnected():
-            pass
+            sleep_ms(100)
     print('network config:', wlan.ifconfig())
 
 
@@ -110,7 +110,7 @@ print("guardar ha cambiado a true")
 
 while True:
     while not getReq("guardar"):
-        time.sleep(60) # Waits until the "guardar" signal arrives
+        sleep(10) # Waits until the "guardar" signal arrives
 
     if contact0.value() == 1:
         for tool in cajon1:
@@ -121,7 +121,8 @@ while True:
             elif tool.linea == 3:
                 linea3.on()
 
-        for tool in cajon1:
+            sleep_ms(50)
+
             if tool.sel[0] == 1:
                 s0.on()
             if tool.sel[1] == 1:
@@ -130,6 +131,8 @@ while True:
                 s2.on()
             if tool.sel[3] == 1:
                 s3.on()
+
+            sleep_ms(50)
 
             if signal == 1:
                 missing_tools.append(tool.nombre)
@@ -142,6 +145,8 @@ while True:
             s1.off()
             s2.off()
             s3.off()
+
+            sleep_ms(500)
 
 
     # contact = 0
