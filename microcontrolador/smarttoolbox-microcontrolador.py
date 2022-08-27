@@ -24,6 +24,9 @@ dbId = ""
 # DB Url
 dbURL = f"https://smart-toolbox-{dbId}-default-rtdb.firebaseio.com"
 
+# Toolbox Number
+toolbox = "12537865"
+
 # I/O ports
 contact0 = Pin(25,Pin.IN)
 contact1 = Pin(26,Pin.IN)
@@ -104,7 +107,6 @@ while True:
         time.sleep(60) # Waits until the "guardar" signal arrives
 
     if contact0.value() == 1:
-        S = 0
         for tool in cajon1:
             if tool.linea == 1:
                 linea1.on()
@@ -112,6 +114,7 @@ while True:
                 linea2.on()
             elif tool.linea == 3:
                 linea3.on()
+
         for tool in cajon1:
             if tool.sel[0] == 1:
                 s0.on()
