@@ -45,24 +45,24 @@ s3 = Pin(4,Pin.OUT)
 
 # Tools constructor
 class Herramientas():
-    def __init__(self,num,sel,estado,linea):
+    def __init__(self,num,sel,nombre,linea):
         self.num = num
         self.sel = sel
-        self.estado = estado
+        self.nombre = nombre
         self.linea = linea
 
 # Tools objects
-pinza_fuerza = Herramientas(0,[0,0,0,0],False,1)
-pinza_punta_1 = Herramientas(1,[0,0,0,0],False,1)
-pinza_punta_2 = Herramientas(2,[0,0,0,0],False,1)
-pinza_frenar = Herramientas(3,[0,0,0,0],False,1)
-pinza_loro = Herramientas(4,[0,0,0,0],False,1)
-alicates = Herramientas(5,[0,0,0,0],False,1)
-dest_plano_1 = Herramientas(6,[0,0,0,0],False,1)
-dest_plano_2 = Herramientas(7,[0,0,0,0],False,1)
-dest_phillips_1 = Herramientas(8,[0,0,0,0],False,1)
-dest_phillips_2 = Herramientas(9,[0,0,0,0],False,1)
-cricket = Herramientas(10,[0,0,0,0],False,1)
+pinza_fuerza = Herramientas(0,[0,0,0,0],"Pinza de fuerza",1)
+pinza_punta_1 = Herramientas(1,[0,0,0,0],"Pinza de punta 1",1)
+pinza_punta_2 = Herramientas(2,[0,0,0,0],"Pinza de punta 2",1)
+pinza_frenar = Herramientas(3,[0,0,0,0],"Pinza de frenar",1)
+pinza_loro = Herramientas(4,[0,0,0,0],"Pinza pico de loro",1)
+alicates = Herramientas(5,[0,0,0,0],"Alicates",1)
+dest_plano_1 = Herramientas(6,[0,0,0,0],"Destornillador plano 2",1)
+dest_plano_2 = Herramientas(7,[0,0,0,0],"Destornillador plano 2",1)
+dest_phillips_1 = Herramientas(8,[0,0,0,0],"Destornillador Phillips 1",1)
+dest_phillips_2 = Herramientas(9,[0,0,0,0],"Destornillador Phillips 2",1)
+cricket = Herramientas(10,[0,0,0,0],"Cricket",1)
 # ! Llaves combinadas
 # ! Tubos de encastre de 1/4
 # ! Tubos de encastre de 1/4
