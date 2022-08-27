@@ -103,15 +103,35 @@ while True:
     while not getReq("guardar"):
         time.sleep(60) # Waits until the "guardar" signal arrives
 
-    if contact0.value():
+    if contact0.value() == 1:
         S = 0
         for tool in cajon1:
             if tool.linea == 1:
                 linea1.on()
-            if tool.linea == 2:
+            elif tool.linea == 2:
                 linea2.on()
-            if tool.linea == 3:
+            elif tool.linea == 3:
                 linea3.on()
+        for tool in cajon1:
+            if tool.sel[0] == 1:
+                s0.on()
+            if tool.sel[1] == 1:
+                s1.on()
+            if tool.sel[2] == 1:
+                s2.on()
+            if tool.sel[3] == 1:
+                s3.on()
+
+            if signal == 1:
+                tool.estado = True
+            elif signal == 0:
+                tool.estado = False
+
+            s0.off()
+            s1.off()
+            s2.off()
+            s3.off()
+
 
     # contact = 0
     # while not contact > 2:
