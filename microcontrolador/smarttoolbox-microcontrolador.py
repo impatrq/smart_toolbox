@@ -136,7 +136,7 @@ while True:
                 patchReq(f"cajas/{toolbox}",{"missing_tools": " | ".join(missing_tools), "state": True})
             elif signal == 0:
                 missing_tools.remove(tool.nombre)
-                patchReq(f"cajas/{toolbox}",{"missing_tools": " | ".join(missing_tools), "state": True})
+                patchReq(f"cajas/{toolbox}",{"missing_tools": " | ".join(missing_tools), "state": False})
 
             s0.off()
             s1.off()
