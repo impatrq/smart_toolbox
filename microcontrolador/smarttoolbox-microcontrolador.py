@@ -33,6 +33,13 @@ linea1 = Pin(12, Pin.OUT)
 linea2 = Pin(13, Pin.OUT)
 linea3 = Pin(14, Pin.OUT)
 
+# Multiplexer
+signal = Pin(16,Pin.IN)
+s0 = Pin(0,Pin.OUT)
+s1 = Pin(15,Pin.OUT)
+s2 = Pin(2,Pin.OUT)
+s3 = Pin(4,Pin.OUT)
+
 # Tools constructor
 class Herramientas():
     def __init__(self,num,sel,estado,linea):
