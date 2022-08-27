@@ -97,7 +97,14 @@ while True:
         time.sleep(60) # Waits until the "guardar" signal arrives
 
     if contact0.value():
-        pass
+        S = 0
+        for tool in cajon1:
+            if tool.linea == 1:
+                linea1.on()
+            if tool.linea == 2:
+                linea2.on()
+            if tool.linea == 3:
+                linea3.on()
 
     # contact = 0
     # while not contact > 2:
