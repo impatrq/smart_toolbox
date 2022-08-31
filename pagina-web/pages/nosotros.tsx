@@ -27,14 +27,14 @@ const nosotros: NextPage = () => {
             text="Planos y Modelos"
             github="https://github.com/joacozape04"
             email="mailto:joaquinosmartinez@gmail.com"
-            ig=""
+            ig="https://www.instagram.com/joaquinosmartinez"
           />
           <ContactCard
             person="Lucas Herrera"
             text="Estructura y Circuitos"
             github="https://github.com/lucas-le-herrera"
             email="mailto:lucassherreraa2003@gmail.com"
-            ig=""
+            ig="https://www.instagram.com/lucas.herreraa.19"
           />
         </Row>
         <Row className="w-full">
@@ -43,14 +43,14 @@ const nosotros: NextPage = () => {
             text="Estructura y Aplicación móvil"
             github="https://github.com/RamiroMariani"
             email="mailto:ramiromariani99@gmail.com"
-            ig=""
+            ig="https://www.instagram.com/rama_764"
           />
           <ContactCard
             person="Federico Torres"
             text="Microcontrolador, Interfaz gráfica y Página web"
             github="https://github.com/federicotorres233"
             email="mailto:federicotorres233@protonmail.com"
-            ig=""
+            ig="https://www.instagram.com/fede.torres11"
           />
         </Row>
         <Row className="w-full">
@@ -59,14 +59,14 @@ const nosotros: NextPage = () => {
             text="Aplicación móvil"
             github="https://github.com/MiqueasVanore"
             email="mailto:vnmiqueas@gmail.com"
-            ig=""
+            ig="https://www.instagram.com/miqueasvn"
           />
           <ContactCard
             person="Agustín Esquivel"
             text="Circuitos y PCB"
             github="https://github.com/Agustin-Esquivel04"
             email="mailto:esquivel.agustin04@gmail.com"
-            ig=""
+            ig="https://www.instagram.com/agus_esquivel_1"
           />
         </Row>
       </div>
