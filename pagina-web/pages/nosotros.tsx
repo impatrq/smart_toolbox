@@ -1,8 +1,9 @@
 import ContactCard from "../components/ContactCard";
 import NavBar from "../components/NavBar";
 import { Row } from "react-bootstrap";
+import { NextPage } from "next";
 
-export default function nosotros() {
+const nosotros: NextPage = () => {
   return (
     <div className="bg-[#130b10] min-h-screen">
       <NavBar />
@@ -74,10 +75,12 @@ export default function nosotros() {
         <iframe
           className="rounded-xl w-full md:w-1/2 sm:h-96"
           src="https://maps.google.com/maps?width=720&amp;height=600&amp;hl=es&amp;q=Av.%20Otamendi,%20B1878%20Quilmes,%20Provincia%20de%20Buenos%20Aires+(IMPA)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-          allowFullScreen=""
+          allowFullScreen={false}
           loading="lazy"
         ></iframe>
       </div>
     </div>
   );
-}
+};
+
+export default nosotros;

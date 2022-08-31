@@ -2,8 +2,9 @@ import { Parallax } from "@react-spring/parallax";
 import Header from "../components/Header";
 import MainPageSections from "../components/MainPageSections";
 import SocialSection from "../components/SocialSection";
+import { NextPage } from "next";
 
-export default function Home() {
+const Home: NextPage = () => {
   return (
     <>
       <Parallax pages={3} horizontal>
@@ -13,4 +14,6 @@ export default function Home() {
       </Parallax>
     </>
   );
-}
+};
+
+export default Home;

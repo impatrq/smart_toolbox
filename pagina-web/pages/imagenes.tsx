@@ -2,8 +2,9 @@ import NavBar from "../components/NavBar";
 import fs from "fs";
 import path from "path";
 import Galeria from "../components/Galeria";
+import { NextPage } from "next";
 
-export default function imagenes({ pictures }) {
+const imagenes: NextPage = ({ pictures }: { pictures: String[] }) => {
   const images = pictures.map((i) => `/pictures/${i}`);
   return (
     <div className="bg-[#130b10] min-h-screen">
@@ -20,7 +21,9 @@ export default function imagenes({ pictures }) {
       </div>
     </div>
   );
-}
+};
+
+export default imagenes;
 
 export async function getStaticProps() {
   const files = fs.readdirSync(path.join("public/pictures"));

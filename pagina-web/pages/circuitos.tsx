@@ -1,6 +1,7 @@
 import NavBar from "../components/NavBar";
+import { NextPage } from "next";
 
-export default function nosotros() {
+const circuitos: NextPage = () => {
   return (
     <div className="bg-[#130b10] min-h-screen">
       <NavBar />
@@ -44,4 +45,6 @@ export default function nosotros() {
       </div>
     </div>
   );
-}
+};
+
+export default circuitos;
