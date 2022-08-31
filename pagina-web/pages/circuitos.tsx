@@ -3,7 +3,7 @@ import { NextPage } from "next";
 
 const circuitos: NextPage = () => {
   return (
-    <div className="bg-[#130b10] min-h-screen">
+    <div className="bg-[#16213E] min-h-screen">
       <NavBar />
       <div className="h-1/2 max-w-full">
         <div className="grid place-items-center my-7 max-w-full">
