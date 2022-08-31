@@ -40,8 +40,12 @@ const circuitos: NextPage = () => {
             <li className="my-1">Una batería de 12VDC</li>
           </ul>
         </h3>
-        <h4 className="text-center my-7 text-white text-2xl">Planos</h4>
-        <img className="rounded-lg img-fluid" src={"/circuito.jpg"} />
+        <div className="h-1/2 max-w-full mb-8">
+          <div className="grid place-items-center mb-7 max-w-full">
+            <h1 className="text-center text-white text-5xl my-3">Planos</h1>
+          </div>
+        </div>
+        <img className="rounded-lg img-fluid" src={"/planos.jpg"} />
       </div>
     </div>
   );
