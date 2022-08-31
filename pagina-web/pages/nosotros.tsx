@@ -30,7 +30,7 @@ const nosotros: NextPage = () => {
             ig=""
           />
           <ContactCard
-            person="Herrera Lucas"
+            person="Lucas Herrera"
             text="Estructura y Circuitos"
             github="https://github.com/lucas-le-herrera"
             email="mailto:lucassherreraa2003@gmail.com"
@@ -55,14 +55,14 @@ const nosotros: NextPage = () => {
         </Row>
         <Row className="w-full">
           <ContactCard
-            person="Vanore Miqueas"
+            person="Miqueas Vanore"
             text="Aplicación móvil"
             github="https://github.com/MiqueasVanore"
             email="mailto:vnmiqueas@gmail.com"
             ig=""
           />
           <ContactCard
-            person="Esquivel Agustín"
+            person="Agustín Esquivel"
             text="Circuitos y PCB"
             github="https://github.com/Agustin-Esquivel04"
             email="mailto:esquivel.agustin04@gmail.com"
