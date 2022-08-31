@@ -13,7 +13,7 @@ export default function SectionsMainPage() {
       <ParallaxLayer
         offset={1}
         speed={1.3}
-        style={{ display: "grid", "place-items": "center" }}
+        className="grid place-items-center"
       >
         <Container>
           <Row>
