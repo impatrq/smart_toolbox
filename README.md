@@ -19,6 +19,33 @@ Este proyecto surgió como una variación de otro llamado _Tool Finder_. La prin
 Durante la jornada de trabajo, el operario _dispondrá de todas las tareas a realizar en el día en la aplicación móvil_. Estas serán cargadas a través de una página web.
 Después de terminar la jornada de trabajo, el operario deberá guardar todas las herramientas en la caja y, de este modo,  evitar el extravío de éstas. En el caso contrario, al cerrarse alguno de los cajones, el sistema _detectará que faltan herramientas_, avisándole de esto mediante un sonido. Los utensilios faltantes se podrán _visualizar en la aplicacion móvil_.
 
+## Tecnologías utilizadas
+
+### Aplicación móvil
+* React
+* Ionic
+* Javascript
+* Bootstrap
+
+### Interfaz gráfica
+* React
+* Bootstrap
+* Javascript
+
+### Base de datos
+* Firebase Realtime Database
+
+### Microcontrolador
+* uPython
+
+### Planos
+* AutoCAD
+
+### Página web
+* Next.js
+* TailwindCSS
+* Bootstrap
+
 ## Contacto
 
 :email: Email: smart.toolbox@proton.me :email:
