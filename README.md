@@ -6,46 +6,73 @@
 
 </div>
 
-# ¿Qué es Smart Toolbox?
+## ¿Qué es Smart Toolbox?
 
 Smart Toolbox, es un producto que ofrecemos para brindar un nuevo _sistema de orden y seguimiento de herramientas en el espacio de trabajo_, para así _prevenir accidentes_ o _perdidas de dinero en bienes laborales_. También, poseerá una _lista de actividades_ que le brindará al trabajador una mayor comodidad, además de reducir el margen de error por un olvido.
 
-# ¿De dónde surgió la idea?
+## ¿De dónde surgió la idea?
 
 Este proyecto surgió como una variación de otro llamado _Tool Finder_. La principal función de este era la de encontrar, mediante un localizador, las herramientas de trabajo en el taller. A medida que ibamos progresando en el Tool Finder, se fueron descartando y transformando ideas, pero el objetivo de prevenir accidentes nunca cambió. Asi surgió _Smart Toolbox_.
 
-# ¿Cómo funciona?
+## ¿Cómo funciona?
 
 Durante la jornada de trabajo, el operario _dispondrá de todas las tareas a realizar en el día en la aplicación móvil_. Estas serán cargadas a través de una página web.
 Después de terminar la jornada de trabajo, el operario deberá guardar todas las herramientas en la caja y, de este modo,  evitar el extravío de éstas. En el caso contrario, al cerrarse alguno de los cajones, el sistema _detectará que faltan herramientas_, avisándole de esto mediante un sonido. Los utensilios faltantes se podrán _visualizar en la aplicacion móvil_.
 
-# Contacto
+## Tecnologías utilizadas
 
-* :email: Email :arrow_right: Smart.Toolbox@proton.me
+### Aplicación móvil
+* React
+* Ionic
+* Javascript
+* Bootstrap
 
-* :globe_with_meridians: Pagina web :arrow_right: [smart-toolbox.tk](https://www.smart-toolbox.tk/)
+### Interfaz gráfica
+* React
+* Bootstrap
+* Javascript
+
+### Base de datos
+* Firebase Realtime Database
+
+### Microcontrolador
+* uPython
+
+### Planos
+* AutoCAD
+
+### Página web
+* Next.js
+* TailwindCSS
+* Bootstrap
+
+## Contacto
+
+:email: Email: smart.toolbox@proton.me :email:
+
+:globe_with_meridians: Página web: [smart-toolbox.tk](https://www.smart-toolbox.tk/) :globe_with_meridians:
 
 
-# ¿Quiénes somos?
+## ¿Quiénes somos?
 
 Somos un grupo de alumnos de E.E.S.T. N°7 "Taller Regional Quilmes" (IMPA).
 
-# Integrantes
+## Integrantes
 
-### - Esquivel, Agustín
-📧Email: esquivel.agustin04@gmail.com
-### - Herrera, Lucas
-📧Email: lucassherreraa2003@gmail.com
-### - Mariani, Ramiro
-📧Email: ramiromariani99@gmail.com
-### - Martínez, Joaquín
-📧Email: joaquinosmartinez@gmail.com
-### - Torres, Federico
-📧Email: federicotorres233@protonmail.com
-### - Vanore, Miqueas 
-📧Email: vnmiqueas@gmail.com
+### Esquivel, Agustín
+📧 esquivel.agustin04@gmail.com
+### Herrera, Lucas
+📧 lucassherreraa2003@gmail.com
+### Mariani, Ramiro
+📧 ramiromariani99@gmail.com
+### Martínez, Joaquín
+📧 joaquinosmartinez@gmail.com
+### Torres, Federico
+📧 federicotorres233@protonmail.com
+### Vanore, Miqueas 
+📧 vnmiqueas@gmail.com
 
-# Logros
+## Logros
 
 <div align="center">
 
