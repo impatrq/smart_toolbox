@@ -21,9 +21,9 @@ Después de terminar la jornada de trabajo, el operario deberá guardar todas la
 
 # Contacto
 
-* :email: Email :arrow_right: Smart.Toolbox@proton.me
+:email: smart.toolbox@proton.me :email:
 
-* :globe_with_meridians: Pagina web :arrow_right: [smart-toolbox.tk](https://www.smart-toolbox.tk/)
+:globe_with_meridians: [smart-toolbox.tk](https://www.smart-toolbox.tk/) :globe_with_meridians:
 
 
 # ¿Quiénes somos?
