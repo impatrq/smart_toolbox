@@ -57,9 +57,26 @@ const funcionamiento: NextPage = () => {
           className="my-5 lg:w-1/2 rounded-lg img-fluid"
           src={"diagramaflujo.png"}
         />
-        {/* <h4 className="text-center mb-7 text-white font-bold text-3xl">
+        <h4 className="text-center mb-1 text-white font-bold text-3xl">
           Aplicación móvil
-        </h4> */}
+        </h4>
+        <h3 className="md:text-2xl sm:text-xl text-lg md:px-14 text-center prose sm:leading-9 leading-7 text-white mt-3">
+          La aplicación móvil posee 3 pestañas:
+          <ul className="mt-2 mb-4 text-left">
+            <li className="my-1">
+              <span className="font-semibold">Actividades</span>: Muestra las
+              actividades a realizar
+            </li>
+            <li className="my-1">
+              <span className="font-semibold">Herramientas</span>: Muestra las
+              herramientas faltantes de la caja vinculada al usuario
+            </li>
+            <li className="my-1">
+              <span className="font-semibold">Caja de herramientas</span>: Permite vincular
+              el usuario con una caja mediante un escáner QR
+            </li>
+          </ul>
+        </h3>
       </div>
     </div>
   );
