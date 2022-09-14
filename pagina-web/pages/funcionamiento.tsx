@@ -53,6 +53,10 @@ const funcionamiento: NextPage = () => {
           herramientas, avisándole de esto mediante un sonido. Los utensilios
           faltantes se podrán visualizar en la aplicacion móvil.
         </h3>
+        <img
+          className="my-5 lg:w-1/2 rounded-lg img-fluid"
+          src={"diagramaflujo.png"}
+        />
         {/* <h4 className="text-center mb-7 text-white font-bold text-3xl">
           Aplicación móvil
         </h4> */}
