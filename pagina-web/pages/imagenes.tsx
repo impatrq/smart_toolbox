@@ -16,7 +16,7 @@ const imagenes: NextPage = ({ pictures }: { pictures: String[] }) => {
           </h1>
         </div>
       </div>
-      <div className="m-10">
+      <div className="p-10">
         <Galeria images={images} />
       </div>
     </div>
