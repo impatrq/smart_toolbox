@@ -92,6 +92,25 @@ const funcionamiento: NextPage = () => {
             <li className="my-1">Enviar la señal de guardado</li>
           </ol>
         </h3>
+        <h4 className="text-center mt-4 mb-1 text-white font-bold text-3xl">
+          Caja de herramientas
+        </h4>
+        <h3 className="md:text-2xl sm:text-xl text-lg md:px-14 text-center prose sm:leading-9 leading-7 text-white mt-3">
+          Al terminar la jornada de trabajo, la caja recibirá la señal de
+          guardar y entonces empezará su función:
+          <ol className="mt-3 mb-4 text-left">
+            <li className="my-1">
+              La caja detectará si cada cajón está abierto.
+            </li>
+            <li className="my-1">
+              Si está abierto leera el estado de cada herramienta en ese cajón.
+            </li>
+            <li className="my-1">
+              Si la herramienta no se encuentra allí activará la alarma y se
+              avisará a el operario vinculado a esa caja.
+            </li>
+          </ol>
+        </h3>
       </div>
     </div>
   );
