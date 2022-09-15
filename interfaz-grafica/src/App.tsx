@@ -1,8 +1,15 @@
+import { Routes, Route } from "react-router-dom";
+import Home from "./Home";
 import db from "./firebase";
 
 function App() {
-  console.log(db)
-  return <div>Welcome to Smart Toolbox Interface</div>;
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </>
+  );
 }
 
 export default App;
