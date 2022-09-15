@@ -2,7 +2,7 @@
 
 # [Smart Toolbox](https://www.smart-toolbox.tk/)
 
-<img src="https://user-images.githubusercontent.com/80338247/173062549-fb855482-8430-4bcf-8163-740a89915549.png" height="400" width="400" />
+<img src="https://user-images.githubusercontent.com/80327788/190393898-d13cce88-e29e-45da-8dda-b5642c21e2eb.png" height="400" width="400" />
 
 </div>
 
