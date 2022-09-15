@@ -5,6 +5,7 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import { Button } from "react-bootstrap";
 import { useState } from "react";
+import { ref, update } from "firebase/database";
 import db from "./firebase";
 
 export default function Home() {
@@ -52,7 +53,10 @@ export default function Home() {
           <Row>
             <Form>
               <Form.Check
-                onChange={() => setIsSwitchOn(!isSwitchOn)}
+                onChange={() => {
+                  update(ref(db), { "/sector1/guardar": !isSwitchOn });
+                  setIsSwitchOn(!isSwitchOn);
+                }}
                 checked={isSwitchOn}
                 style={{ fontSize: "2rem" }}
                 type="switch"
