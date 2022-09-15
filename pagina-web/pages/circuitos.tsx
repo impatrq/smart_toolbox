@@ -10,7 +10,7 @@ const circuitos: NextPage = () => {
           <h1 className="text-center text-white text-5xl mt-3">Circuitos</h1>
         </div>
       </div>
-      <div className="m-10 place-items-center grid">
+      <div className="mt-10 mx-10 pb-10 place-items-center grid">
         <h4 className="text-center mb-7 text-white text-2xl">
           Placa principal
         </h4>

@@ -70,7 +70,7 @@ const nosotros: NextPage = () => {
           />
         </Row>
       </div>
-      <div className="grid place-items-center my-16 px-5">
+      <div className="grid place-items-center py-16 px-5">
         <h1 className="text-white my-7">¡Nuestra Escuela!</h1>
         <iframe
           className="rounded-xl w-full md:w-1/2 sm:h-96"
