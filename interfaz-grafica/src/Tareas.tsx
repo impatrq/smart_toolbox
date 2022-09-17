@@ -6,13 +6,20 @@ import Form from "react-bootstrap/Form";
 import { Dropdown } from "react-bootstrap";
 import { DropdownButton } from "react-bootstrap";
 import { Button } from "react-bootstrap";
-import { useState } from "react";
-import { ref, update } from "firebase/database";
+import { useState, useEffect } from "react";
+import { ref, update, onValue } from "firebase/database";
 import db from "./firebase";
 
 export default function Home() {
-  const [isSwitchOn, setIsSwitchOn] = useState(false);
-  console.log(isSwitchOn);
+  const [operarios, setOperarios] = useState<String[]>();
+  const [operario, setOperario] = useState<String>();
+  useEffect(() => {
+    const personasRef = ref(db, "sector1/personas");
+    onValue(personasRef, (snapshot) => {
+      const raw_data = snapshot.val();
+      setOperarios(Object.keys(raw_data));
+    });
+  }, []);
   const divStyle = {
     maxWidth: "100vw",
     minHeight: "100vh",
@@ -29,60 +36,30 @@ export default function Home() {
   };
   return (
     <div style={divStyle}>
-      <div style={{display:"grid",placeItems:"center"}}>
+      <div style={{ display: "grid", placeItems: "center" }}>
         <h2>
-          <strong>Añadir tareas para</strong>
+          Añadir tareas para <strong>{operario}</strong>
         </h2>
         <DropdownButton
           id="dropdown-button-dark-example2"
           variant="success"
           menuVariant="dark"
-          title="Dropdown button"
+          title="Elegir un operario"
           className="mt-2"
           size="lg"
           drop="end"
         >
-          <Dropdown.Item as="button">Another action</Dropdown.Item>
-          <Dropdown.Item as="button">Something else</Dropdown.Item>
+          {operarios?.map((i, index) => (
+            <Dropdown.Item
+              onClick={(e) => setOperario(e.target["innerHTML"])}
+              key={index}
+              as="button"
+            >
+              {i}
+            </Dropdown.Item>
+          ))}
         </DropdownButton>
       </div>
-      <Container>
-        <Row>
-          <Col style={itemStyle}>
-            <Link style={link} to="/tareas">
-              <Button style={{ width: "50%" }}>
-                <strong>Tareas</strong>
-              </Button>
-            </Link>
-          </Col>
-          <Col style={itemStyle}>
-            <Link style={link} to="/cajas">
-              <Button style={{ width: "50%" }}>
-                <strong>Cajas</strong>
-              </Button>
-            </Link>
-          </Col>
-        </Row>
-        <div
-          style={{ marginTop: "3rem", display: "grid", placeItems: "center" }}
-        >
-          <Row>
-            <Form>
-              <Form.Check
-                onChange={() => {
-                  update(ref(db), { "/sector1/guardar": !isSwitchOn });
-                  setIsSwitchOn(!isSwitchOn);
-                }}
-                checked={isSwitchOn}
-                style={{ fontSize: "2rem" }}
-                type="switch"
-                id="custom-switch"
-                label=""
-              />
-            </Form>
-          </Row>
-        </div>
-      </Container>
     </div>
   );
 }
