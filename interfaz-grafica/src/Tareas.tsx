@@ -4,6 +4,7 @@ import { DropdownButton } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import { ref, update, onValue } from "firebase/database";
 import { ListGroup } from "react-bootstrap";
+import Form from "react-bootstrap/Form";
 import db from "./firebase";
 
 export default function Home() {
@@ -46,7 +47,7 @@ export default function Home() {
           className="mt-2"
           size="lg"
           drop="end"
-          style={{marginBottom:"1rem"}}
+          style={{ marginBottom: "1rem" }}
         >
           {operarios?.map((i, index) => (
             <Dropdown.Item
@@ -59,7 +60,7 @@ export default function Home() {
           ))}
         </DropdownButton>
         <Container>
-          <ListGroup as="ol" numbered>
+          <ListGroup as="ol" numbered style={{marginBottom:"3rem"}}>
             {tareas[`${operario}`]?.tareas
               ?.split(/\|/gi)
               ?.map((i: String) => i.replace(/^\s+|\s+$/gi, ""))
@@ -69,6 +70,13 @@ export default function Home() {
                 </ListGroup.Item>
               ))}
           </ListGroup>
+          <Form.Label>
+            Añadir Tareas para <strong>{operario}</strong>
+          </Form.Label>
+          <Form.Control
+            type="text"
+            placeholder={`Ingrese una tarea para ${operario}`}
+          />
         </Container>
       </div>
     </div>
