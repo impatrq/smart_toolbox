@@ -1,23 +1,21 @@
-import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Form from "react-bootstrap/Form";
 import { Dropdown } from "react-bootstrap";
 import { DropdownButton } from "react-bootstrap";
-import { Button } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import { ref, update, onValue } from "firebase/database";
+import { ListGroup } from "react-bootstrap";
 import db from "./firebase";
 
 export default function Home() {
-  const [operarios, setOperarios] = useState<String[]>();
+  const [operarios, setOperarios] = useState<String[]>([]);
   const [operario, setOperario] = useState<String>();
+  const [tareas, setTareas] = useState<Object[]>([]);
   useEffect(() => {
     const personasRef = ref(db, "sector1/personas");
     onValue(personasRef, (snapshot) => {
       const raw_data = snapshot.val();
       setOperarios(Object.keys(raw_data));
+      setTareas(raw_data);
     });
   }, []);
   const divStyle = {
@@ -48,6 +46,7 @@ export default function Home() {
           className="mt-2"
           size="lg"
           drop="end"
+          style={{marginBottom:"1rem"}}
         >
           {operarios?.map((i, index) => (
             <Dropdown.Item
@@ -59,6 +58,18 @@ export default function Home() {
             </Dropdown.Item>
           ))}
         </DropdownButton>
+        <Container>
+          <ListGroup as="ol" numbered>
+            {tareas[`${operario}`]?.tareas
+              ?.split(/\|/gi)
+              ?.map((i: String) => i.replace(/^\s+|\s+$/gi, ""))
+              ?.map((i, index) => (
+                <ListGroup.Item as="li" key={index}>
+                  {i}
+                </ListGroup.Item>
+              ))}
+          </ListGroup>
+        </Container>
       </div>
     </div>
   );
