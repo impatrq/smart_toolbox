@@ -5,11 +5,13 @@ import { useState, useEffect } from "react";
 import { ref, update, onValue } from "firebase/database";
 import { ListGroup } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
 import db from "./firebase";
 
 export default function Home() {
   const [operarios, setOperarios] = useState<String[]>([]);
-  const [operario, setOperario] = useState<String>();
+  const [operario, setOperario] = useState<String>("");
+  const [agregar, setAgregar] = useState<String>("");
   const [tareas, setTareas] = useState<Object[]>([]);
   useEffect(() => {
     const personasRef = ref(db, "sector1/personas");
@@ -60,15 +62,19 @@ export default function Home() {
           ))}
         </DropdownButton>
         <Container>
-          <ListGroup as="ol" numbered style={{marginBottom:"3rem"}}>
+          <ListGroup as="ol" numbered style={{ marginBottom: "3rem" }}>
             {tareas[`${operario}`]?.tareas
               ?.split(/\|/gi)
               ?.map((i: String) => i.replace(/^\s+|\s+$/gi, ""))
-              ?.map((i, index) => (
-                <ListGroup.Item as="li" key={index}>
-                  {i}
-                </ListGroup.Item>
-              ))}
+              ?.map((i, index) => {
+                if (i !== "" && i !== undefined) {
+                  return (
+                    <ListGroup.Item as="li" key={index}>
+                      {i}
+                    </ListGroup.Item>
+                  );
+                }
+              })}
           </ListGroup>
           <Form.Label>
             Añadir Tareas para <strong>{operario}</strong>
@@ -76,7 +82,47 @@ export default function Home() {
           <Form.Control
             type="text"
             placeholder={`Ingrese una tarea para ${operario}`}
+            onChange={(e) => {
+              setAgregar(e.target.value);
+            }}
           />
+          <Button
+            style={{ width: "100%", marginTop: "2rem", marginBottom: "2rem" }}
+            variant="warning"
+            onClick={() => {
+              const misTareas = tareas[`${operario}`]?.tareas;
+              const obj = {};
+              const url = `/sector1/personas/${operario}/tareas`;
+              if (misTareas !== undefined) {
+                if (operario !== "") {
+                  obj[url] = misTareas + ` | ${agregar}`;
+                  update(ref(db), obj);
+                }
+              } else {
+                if (operario !== "") {
+                  obj[url] = agregar;
+                  update(ref(db), obj);
+                }
+              }
+            }}
+          >
+            Subir tareas
+          </Button>
+          <Button
+            style={{ width: "100%", marginBottom: "2rem" }}
+            variant="danger"
+            onClick={() => {
+              const obj = {};
+              const url = `/sector1/personas/${operario}/tareas`;
+              obj[url] = null;
+              if (operario !== "") {
+                update(ref(db), obj);
+                setAgregar("");
+              }
+            }}
+          >
+            Borrar tareas
+          </Button>
         </Container>
       </div>
     </div>
