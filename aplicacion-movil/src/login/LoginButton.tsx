@@ -1,9 +1,9 @@
 import { IonButton, useIonAlert } from '@ionic/react';
-import { useState } from 'react';
+import { useUsuarioContext } from "../contexts/UsuarioContext"
 
-function Example() {
+function LoginButton() {
     const [presentAlert] = useIonAlert();
-    const [usuario, setUsuario] = useState("");
+    const { user, setUser } = useUsuarioContext();
     return (
         <IonButton
             onClick={() =>
@@ -13,7 +13,7 @@ function Example() {
                         text: 'Guardar',
                         role: 'guardar',
                         handler: (e) => {
-                            setUsuario(e[0] + e[1]);
+                            setUser(e[0] + " " + e[1]);
                         },
                     },],
                     inputs: [
@@ -31,4 +31,4 @@ function Example() {
         </IonButton>
     );
 }
-export default Example;
+export default LoginButton;

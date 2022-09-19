@@ -2,7 +2,7 @@ import { createContext, useContext, useState } from 'react';
 
 const UserContext = createContext({ user: "", setUser: null });
 
-export default function UsuarioContextProvider({ children }: JSX.ElementChildrenAttribute) {
+export function UsuarioContextProvider({ children }: JSX.ElementChildrenAttribute) {
     const [user, setUser] = useState("")
     return (
         <UserContext.Provider value={{ user, setUser }}>

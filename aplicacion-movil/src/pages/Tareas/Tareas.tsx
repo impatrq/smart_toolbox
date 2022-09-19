@@ -15,10 +15,12 @@ import { useState, useEffect } from "react";
 import { ref, onValue } from "firebase/database";
 import db from "../../firebase.js";
 import LoginButton from "../../login/LoginButton"
+import { useUsuarioContext } from "../../contexts/UsuarioContext"
 
 const checkboxList: Array<{ val: String; isChecked: boolean }> = [];
 
 const Tareas: React.FC = () => {
+  const { user, setUser } = useUsuarioContext();
   const [list, setList] = useState(checkboxList);
   const updateCheckbox = (i: number) => {
     const lista = JSON.parse(JSON.stringify(list));
@@ -29,7 +31,7 @@ const Tareas: React.FC = () => {
   };
 
   useEffect(() => {
-    const persona = "p1";
+    const persona = user;
 
     const starCountRef = ref(db, "sector1/personas/" + persona + "/tareas");
     onValue(starCountRef, (snapshot) => {
@@ -42,7 +44,7 @@ const Tareas: React.FC = () => {
         });
       setList(data);
     });
-  }, []);
+  }, [user]);
 
   return (
     <IonPage>
