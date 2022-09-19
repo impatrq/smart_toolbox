@@ -10,7 +10,7 @@ import { BarcodeScanner, BarcodeScanResult } from "@awesome-cordova-plugins/barc
 import "./Caja.css";
 import { update, ref } from "firebase/database";
 import db from "../../firebase.js";
-import { useState } from "react";
+import LoginButton from "../../login/LoginButton"
 
 interface barCode {
   [url: string]: number;
@@ -36,6 +36,7 @@ const Caja: React.FC = () => {
       <IonHeader>
         <IonToolbar>
           <IonTitle>Caja</IonTitle>
+          <LoginButton />
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>

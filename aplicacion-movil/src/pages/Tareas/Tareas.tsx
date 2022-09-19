@@ -14,6 +14,7 @@ import {
 import { useState, useEffect } from "react";
 import { ref, onValue } from "firebase/database";
 import db from "../../firebase.js";
+import LoginButton from "../../login/LoginButton"
 
 const checkboxList: Array<{ val: String; isChecked: boolean }> = [];
 
@@ -49,6 +50,7 @@ const Tareas: React.FC = () => {
         <IonToolbar>
           <IonTitle>Tareas</IonTitle>
         </IonToolbar>
+        <LoginButton />
       </IonHeader>
       <IonContent fullscreen>
         <IonList>
