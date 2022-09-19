@@ -6,11 +6,15 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
-import { BarcodeScanner } from "@awesome-cordova-plugins/barcode-scanner";
+import { BarcodeScanner, BarcodeScanResult } from "@awesome-cordova-plugins/barcode-scanner";
 import "./Caja.css";
 import { update, ref } from "firebase/database";
 import db from "../../firebase.js";
 import { useState } from "react";
+
+interface barCode {
+  [url: string]: number;
+}
 
 //ionic build
 //npx cap add android
@@ -18,14 +22,12 @@ import { useState } from "react";
 //npx cap open android
 
 const Caja: React.FC = () => {
-  const [code, setCode] = useState("");
   const nombre = "juan";
   const openScanner = async () => {
     const data = await BarcodeScanner.scan();
-    setCode(data);
-    const obj = {};
-    const url = `/sector1/personas/${nombre}/caja`;
-    obj[url] = data;
+    const obj: barCode = {};
+    const url: string = `/sector1/personas/${nombre}/caja`;
+    obj[url] = Number(data.text);
     update(ref(db), obj);
   };
 
