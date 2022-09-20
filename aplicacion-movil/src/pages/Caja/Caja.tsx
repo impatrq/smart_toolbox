@@ -33,11 +33,13 @@ const Caja: React.FC = () => {
 
   return (
     <IonPage>
-      <IonHeader>
+      <IonHeader style={{ display: "flex", justifyItems: "space-between" }}>
         <IonToolbar>
           <IonTitle>Caja</IonTitle>
-          <LoginButton />
         </IonToolbar>
+        <div style={{ height: "100%", display: "grid", placeItems: "center" }}>
+          <LoginButton />
+        </div>
       </IonHeader>
       <IonContent fullscreen>
         <IonButton

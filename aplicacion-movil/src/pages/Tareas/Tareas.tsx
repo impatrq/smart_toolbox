@@ -48,11 +48,13 @@ const Tareas: React.FC = () => {
 
   return (
     <IonPage>
-      <IonHeader>
+      <IonHeader style={{ display: "flex", justifyItems: "space-between" }}>
         <IonToolbar>
           <IonTitle>Tareas</IonTitle>
         </IonToolbar>
-        <LoginButton />
+        <div style={{ height: "100%", display: "grid",placeItems:"center" }}>
+          <LoginButton />
+        </div>
       </IonHeader>
       <IonContent fullscreen>
         <IonList>
