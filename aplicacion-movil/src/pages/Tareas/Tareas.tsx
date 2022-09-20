@@ -20,30 +20,31 @@ import { useUsuarioContext } from "../../contexts/UsuarioContext"
 const checkboxList: Array<{ val: String; isChecked: boolean }> = [];
 
 const Tareas: React.FC = () => {
-  const { user, setUser } = useUsuarioContext();
+  const { user } = useUsuarioContext();
   const [list, setList] = useState(checkboxList);
   const updateCheckbox = (i: number) => {
     const lista = JSON.parse(JSON.stringify(list));
     const item = lista[i];
     item.isChecked = !item.isChecked;
-    console.log(lista);
     setList(lista);
+    console.log(lista);
   };
 
   useEffect(() => {
-    const persona = user;
+    if (user !== "") {
 
-    const starCountRef = ref(db, "sector1/personas/" + persona + "/tareas");
-    onValue(starCountRef, (snapshot) => {
-      const raw_data = snapshot.val();
-      const data = raw_data
-        .split(/\|/gi)
-        .map((i: String) => i.replace(/^\s+|\s+$/gi, ""))
-        .map((i: String) => {
-          return { val: i, isChecked: false };
-        });
-      setList(data);
-    });
+      const starCountRef = ref(db, "sector1/personas/" + user + "/tareas");
+      onValue(starCountRef, (snapshot) => {
+        const raw_data = snapshot.val();
+        const data = raw_data
+          .split(/\|/gi)
+          .map((i: String) => i.replace(/^\s+|\s+$/gi, ""))
+          .map((i: String) => {
+            return { val: i, isChecked: false };
+          });
+        setList(data);
+      });
+    }
   }, [user]);
 
   return (
@@ -52,7 +53,7 @@ const Tareas: React.FC = () => {
         <IonToolbar>
           <IonTitle>Tareas</IonTitle>
         </IonToolbar>
-        <div style={{ height: "100%", display: "grid",placeItems:"center" }}>
+        <div style={{ height: "100%", display: "grid", placeItems: "center" }}>
           <LoginButton />
         </div>
       </IonHeader>

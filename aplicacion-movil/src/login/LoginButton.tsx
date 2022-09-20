@@ -13,7 +13,7 @@ function LoginButton() {
                         text: 'Guardar',
                         role: 'guardar',
                         handler: (e) => {
-                            setUser(e[0] + " " + e[1]);
+                            e[1]==="" ? setUser(e[0]) : setUser(e[0] + " " + e[1])
                         },
                     },],
                     inputs: [

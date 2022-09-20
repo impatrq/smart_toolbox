@@ -11,6 +11,7 @@ import "./Caja.css";
 import { update, ref } from "firebase/database";
 import db from "../../firebase.js";
 import LoginButton from "../../login/LoginButton"
+import { useUsuarioContext } from "../../contexts/UsuarioContext"
 
 interface barCode {
   [url: string]: number;
@@ -22,11 +23,11 @@ interface barCode {
 //npx cap open android
 
 const Caja: React.FC = () => {
-  const nombre = "juan";
+  const { user } = useUsuarioContext();
   const openScanner = async () => {
     const data = await BarcodeScanner.scan();
     const obj: barCode = {};
-    const url: string = `/sector1/personas/${nombre}/caja`;
+    const url: string = `/sector1/personas/${user}/caja`;
     obj[url] = Number(data.text);
     update(ref(db), obj);
   };
