@@ -11,7 +11,7 @@ import {
 import { useState, useEffect } from "react";
 import { ref, onValue } from "firebase/database";
 import db from "../../firebase.js";
-import LoginButton from "../../login/LoginButton";
+import LoginButton from "../../auth/LoginButton";
 import { useCajaContext } from "../../contexts/CajaContext";
 
 const checkboxList: Array<{ val: String }> = [];

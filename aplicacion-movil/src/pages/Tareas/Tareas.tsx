@@ -12,7 +12,7 @@ import {
 import { useState, useEffect } from "react";
 import { ref, onValue } from "firebase/database";
 import db from "../../firebase.js";
-import LoginButton from "../../login/LoginButton";
+import LoginButton from "../../auth/LoginButton";
 import { useUsuarioContext } from "../../contexts/UsuarioContext";
 
 const checkboxList: Array<{ val: String; isChecked: boolean }> = [];
