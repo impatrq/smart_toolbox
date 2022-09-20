@@ -12,6 +12,7 @@ import { update, ref } from "firebase/database";
 import db from "../../firebase.js";
 import LoginButton from "../../login/LoginButton"
 import { useUsuarioContext } from "../../contexts/UsuarioContext"
+import { useCajaContext } from "../../contexts/CajaContext";
 
 interface barCode {
   [url: string]: number;
@@ -24,8 +25,10 @@ interface barCode {
 
 const Caja: React.FC = () => {
   const { user } = useUsuarioContext();
+  const { setCaja } = useCajaContext();
   const openScanner = async () => {
     const data = await BarcodeScanner.scan();
+    setCaja(Number(data.text));
     const obj: barCode = {};
     const url: string = `/sector1/personas/${user}/caja`;
     obj[url] = Number(data.text);

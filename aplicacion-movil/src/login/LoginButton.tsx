@@ -3,7 +3,7 @@ import { useUsuarioContext } from "../contexts/UsuarioContext"
 
 function LoginButton() {
     const [presentAlert] = useIonAlert();
-    const { user, setUser } = useUsuarioContext();
+    const { setUser } = useUsuarioContext();
     return (
         <IonButton
             onClick={() =>
