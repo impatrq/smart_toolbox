@@ -1,10 +1,8 @@
 import {
-  IonAlert,
   IonCheckbox,
   IonContent,
   IonHeader,
   IonItem,
-  IonItemDivider,
   IonLabel,
   IonList,
   IonPage,
@@ -14,8 +12,8 @@ import {
 import { useState, useEffect } from "react";
 import { ref, onValue } from "firebase/database";
 import db from "../../firebase.js";
-import LoginButton from "../../login/LoginButton"
-import { useUsuarioContext } from "../../contexts/UsuarioContext"
+import LoginButton from "../../login/LoginButton";
+import { useUsuarioContext } from "../../contexts/UsuarioContext";
 
 const checkboxList: Array<{ val: String; isChecked: boolean }> = [];
 
@@ -32,7 +30,6 @@ const Tareas: React.FC = () => {
 
   useEffect(() => {
     if (user !== "") {
-
       const starCountRef = ref(db, "sector1/personas/" + user + "/tareas");
       onValue(starCountRef, (snapshot) => {
         const raw_data = snapshot.val();

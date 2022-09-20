@@ -6,12 +6,12 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
-import { BarcodeScanner, BarcodeScanResult } from "@awesome-cordova-plugins/barcode-scanner";
+import { BarcodeScanner } from "@awesome-cordova-plugins/barcode-scanner";
 import "./Caja.css";
 import { update, ref } from "firebase/database";
 import db from "../../firebase.js";
-import LoginButton from "../../login/LoginButton"
-import { useUsuarioContext } from "../../contexts/UsuarioContext"
+import LoginButton from "../../login/LoginButton";
+import { useUsuarioContext } from "../../contexts/UsuarioContext";
 import { useCajaContext } from "../../contexts/CajaContext";
 
 interface barCode {
