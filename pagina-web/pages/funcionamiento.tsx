@@ -32,7 +32,7 @@ const funcionamiento: NextPage = () => {
         </h3>
         <img
           className="my-5 lg:w-1/2 rounded-lg img-fluid"
-          src={"pictures/4Una Smart Toolbox.jpg"}
+          src={"pictures/004Una Smart Toolbox.jpg"}
         />
       </div>
       <div className="h-1/2 max-w-full">
@@ -60,9 +60,9 @@ const funcionamiento: NextPage = () => {
         <h4 className="text-center mb-1 text-white font-bold text-3xl">
           Aplicación móvil
         </h4>
-        <h3 className="md:text-2xl sm:text-xl text-lg md:px-14 text-center prose sm:leading-9 leading-7 text-white mt-3">
+        <h3 className="max-w-xl w-full md:text-2xl sm:text-xl text-lg md:px-14 text-center prose sm:leading-9 leading-7 text-white mt-3">
           La aplicación móvil posee 3 pestañas:
-          <ul className="mt-3 mb-4 text-left">
+          <ul className="text-xl mt-3 mb-4 text-left">
             <li className="my-1">
               <span className="font-semibold">Actividades</span>: Muestra las
               actividades a realizar
@@ -80,9 +80,9 @@ const funcionamiento: NextPage = () => {
         <h4 className="text-center mt-4 mb-1 text-white font-bold text-3xl">
           Interfaz gráfica
         </h4>
-        <h3 className="md:text-2xl sm:text-xl text-lg md:px-14 text-center prose sm:leading-9 leading-7 text-white mt-3">
+        <h3 className="max-w-xl md:text-2xl sm:text-xl text-lg md:px-14 text-center prose sm:leading-9 leading-7 text-white mt-3">
           La interfaz gráfica permite ver:
-          <ol className="mt-3 mb-4 text-left">
+          <ol className="mt-3 mb-4 text-xl text-left">
             <li className="my-1">Ver el estado de cada caja</li>
             <li className="my-1">Ver los operario vinculados cada caja</li>
             <li className="my-1">
@@ -95,10 +95,10 @@ const funcionamiento: NextPage = () => {
         <h4 className="text-center mt-4 mb-1 text-white font-bold text-3xl">
           Caja de herramientas
         </h4>
-        <h3 className="md:text-2xl sm:text-xl text-lg md:px-14 text-center prose sm:leading-9 leading-7 text-white mt-3">
+        <h3 className="max-w-xl md:text-2xl sm:text-xl text-lg md:px-14 text-center prose sm:leading-9 leading-7 text-white mt-3">
           Al terminar la jornada de trabajo, la caja recibirá la señal de
           guardar y entonces empezará su función:
-          <ol className="mt-3 mb-4 text-left">
+          <ol className="text-xl w-full mt-3 mb-4 text-left">
             <li className="my-1">
               La caja detectará si cada cajón está abierto.
             </li>
