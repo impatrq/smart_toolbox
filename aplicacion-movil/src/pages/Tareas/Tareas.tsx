@@ -50,7 +50,14 @@ const Tareas: React.FC = () => {
         <IonToolbar>
           <IonTitle>Tareas</IonTitle>
         </IonToolbar>
-        <div style={{ height: "100%", display: "grid", placeItems: "center" }}>
+        <div
+          style={{
+            backgroundColor: "#1f1f1f",
+            height: "100%",
+            display: "grid",
+            placeItems: "center",
+          }}
+        >
           <LoginButton />
         </div>
       </IonHeader>
