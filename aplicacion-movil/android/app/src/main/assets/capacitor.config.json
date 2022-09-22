@@ -1,6 +1,6 @@
 {
 	"appId": "io.ionic.starter",
-	"appName": "smarttoolboxapp",
+	"appName": "Smart Toolbox",
 	"webDir": "build",
 	"bundledWebRuntime": false
 }
