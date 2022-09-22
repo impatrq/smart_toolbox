@@ -6,11 +6,13 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
-import { BarcodeScanner, BarcodeScanResult } from "@awesome-cordova-plugins/barcode-scanner";
+import { BarcodeScanner } from "@awesome-cordova-plugins/barcode-scanner";
 import "./Caja.css";
 import { update, ref } from "firebase/database";
 import db from "../../firebase.js";
-import { useState } from "react";
+import LoginButton from "../../auth/LoginButton";
+import { useUsuarioContext } from "../../contexts/UsuarioContext";
+import { useCajaContext } from "../../contexts/CajaContext";
 
 interface barCode {
   [url: string]: number;
@@ -22,21 +24,33 @@ interface barCode {
 //npx cap open android
 
 const Caja: React.FC = () => {
-  const nombre = "juan";
+  const { user } = useUsuarioContext();
+  const { setCaja } = useCajaContext();
   const openScanner = async () => {
     const data = await BarcodeScanner.scan();
+    setCaja(Number(data.text));
     const obj: barCode = {};
-    const url: string = `/sector1/personas/${nombre}/caja`;
+    const url: string = `/sector1/personas/${user}/caja`;
     obj[url] = Number(data.text);
     update(ref(db), obj);
   };
 
   return (
     <IonPage>
-      <IonHeader>
+      <IonHeader style={{ display: "flex", justifyItems: "space-between" }}>
         <IonToolbar>
           <IonTitle>Caja</IonTitle>
         </IonToolbar>
+        <div
+          style={{
+            backgroundColor: "#1f1f1f",
+            height: "100%",
+            display: "grid",
+            placeItems: "center",
+          }}
+        >
+          <LoginButton />
+        </div>
       </IonHeader>
       <IonContent fullscreen>
         <IonButton

@@ -1,10 +1,7 @@
 import {
-  IonAlert,
-  IonCheckbox,
   IonContent,
   IonHeader,
   IonItem,
-  IonItemDivider,
   IonLabel,
   IonList,
   IonPage,
@@ -14,34 +11,47 @@ import {
 import { useState, useEffect } from "react";
 import { ref, onValue } from "firebase/database";
 import db from "../../firebase.js";
+import LoginButton from "../../auth/LoginButton";
+import { useCajaContext } from "../../contexts/CajaContext";
 
-const checkboxList: Array<{ val: String}> = [];
+const checkboxList: Array<{ val: String }> = [];
 
 const Herramientas: React.FC = () => {
+  const { caja } = useCajaContext();
   const [list, setList] = useState(checkboxList);
 
   useEffect(() => {
-    const caja = "12537865";
-
-    const starCountRef = ref(db, "sector1/cajas/" + caja + "/missing_tools");
-    onValue(starCountRef, (snapshot) => {
-      const raw_data = snapshot.val();
-      const data = raw_data
-        .split(/\|/gi)
-        .map((i: String) => i.replace(/^\s+|\s+$/gi, ""))
-        .map((i: String) => {
-          return { val: i, isChecked: false };
-        });
-      setList(data);
-    });
-  }, []);
+    if (caja !== "") {
+      const starCountRef = ref(db, "sector1/cajas/" + caja + "/missing_tools");
+      onValue(starCountRef, (snapshot) => {
+        const raw_data = snapshot.val();
+        const data = raw_data
+          .split(/\|/gi)
+          .map((i: String) => i.replace(/^\s+|\s+$/gi, ""))
+          .map((i: String) => {
+            return { val: i, isChecked: false };
+          });
+        setList(data);
+      });
+    }
+  }, [caja]);
 
   return (
     <IonPage>
-      <IonHeader>
+      <IonHeader style={{ display: "flex", justifyItems: "space-between" }}>
         <IonToolbar>
           <IonTitle>Herramientas</IonTitle>
         </IonToolbar>
+        <div
+          style={{
+            backgroundColor: "#1f1f1f",
+            height: "100%",
+            display: "grid",
+            placeItems: "center",
+          }}
+        >
+          <LoginButton />
+        </div>
       </IonHeader>
       <IonContent fullscreen>
         <IonList>
