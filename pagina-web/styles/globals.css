@@ -29,3 +29,18 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@media (min-width: 1024px) {
+  ::-webkit-scrollbar {
+    height: 14px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #599ec9;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0c4a6e;
+  }
+}
