@@ -38,7 +38,7 @@ export default function Home() {
   return (
     <div style={divStyle}>
       <div style={{ display: "grid", placeItems: "center" }}>
-        <h2>
+        <h2 style={{color:"#F9F7F7"}}>
           Añadir tareas para <strong>{operario}</strong>
         </h2>
         <DropdownButton
@@ -76,7 +76,7 @@ export default function Home() {
                 }
               })}
           </ListGroup>
-          <Form.Label>
+          <Form.Label style={{color:"#DBE2EF"}}>
             Añadir Tareas para <strong>{operario}</strong>
           </Form.Label>
           <Form.Control

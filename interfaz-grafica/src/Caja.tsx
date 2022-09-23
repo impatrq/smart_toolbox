@@ -45,7 +45,9 @@ export default function Caja() {
   return (
     <div style={divStyle}>
       <div style={{ display: "grid", placeItems: "center" }}>
-        <h2 style={{ marginBottom: "3rem" }}>Cajas de este sector</h2>
+        <h2 style={{ color: "#F9F7F7", marginBottom: "3rem" }}>
+          Cajas de este sector
+        </h2>
         <Container>
           <Table striped bordered hover variant="dark">
             <thead>

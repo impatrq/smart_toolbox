@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
-import { Button } from "react-bootstrap";
+import { Button, Image } from "react-bootstrap";
 import { useState } from "react";
 import { ref, update } from "firebase/database";
 import db from "./firebase";
@@ -15,7 +15,7 @@ export default function Home() {
     maxWidth: "100vw",
     minHeight: "100vh",
     display: "grid",
-    "place-items": "center",
+    placeItems: "center",
   };
   const itemStyle = { display: "grid", "place-items": "center" };
   const link = {
@@ -27,21 +27,42 @@ export default function Home() {
   };
   return (
     <div style={divStyle}>
-      <h2>
-        <strong>Interfaz gráfica de Smart Toolbox</strong>
-      </h2>
+      <div style={{ height: "20vh", display: "grid", justifyItems: "center" }}>
+        <h1>
+          <strong style={{ textShadow: "1px",color: "#F9F7F7" }}>Interfaz gráfica</strong>
+        </h1>
+        <Image
+          fluid
+          style={{ height: "15rem", width: "auto" }}
+          src="/icono.png"
+        ></Image>
+      </div>
       <Container>
         <Row>
           <Col style={itemStyle}>
             <Link style={link} to="/tareas">
-              <Button style={{ width: "50%" }}>
+              <Button
+                style={{
+                  boxShadow: "3px 3px",
+                  border: "none",
+                  backgroundColor: "#3F72AF",
+                  width: "50%",
+                }}
+              >
                 <strong>Tareas</strong>
               </Button>
             </Link>
           </Col>
           <Col style={itemStyle}>
             <Link style={link} to="/cajas">
-              <Button style={{ width: "50%" }}>
+              <Button
+                style={{
+                  boxShadow: "3px 3px",
+                  border: "none",
+                  backgroundColor: "#3F72AF",
+                  width: "50%",
+                }}
+              >
                 <strong>Cajas</strong>
               </Button>
             </Link>
