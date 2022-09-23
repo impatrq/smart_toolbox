@@ -15,7 +15,6 @@ export default function Caja() {
             setCajasArray(result)
         });
     }, []);
-
     const divStyle = {
         maxWidth: "100vw",
         minHeight: "100vh",
@@ -51,6 +50,10 @@ export default function Caja() {
                                 <tr key={key}>
                                     <td>{Object.keys(caja)}</td>
                                     <td>{caja[`${Object.keys(caja)}`]["state"] ? "Encendida" : "Apagada"}</td>
+                                    <td>{caja[`${Object.keys(caja)}`]["missing_tools"].split(/\|/gi)
+                                        .map((i: String) => i.replace(/^\s+|\s+$/gi, ""))
+                                        .join(", ")}
+                                    </td>
                                 </tr>)}
                         </tbody>
                     </Table>
