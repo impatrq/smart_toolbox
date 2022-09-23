@@ -27,7 +27,8 @@
     "electron:start": "concurrently \"npm start\" \"wait-on http://localhost:3000 && electron .\"",
     "electron:build": "npm run build-electron && electron-builder build --publish never",
     "build": "PUBLIC_URL=/ react-scripts build",
-    "build-electron": "react-scripts build"
+    "build-electron": "react-scripts build",
+    "electron:build:all": "npm run build-electron && electron-builder build --publish never -wl"
   },
   "eslintConfig": {
     "extends": [
@@ -56,15 +57,15 @@
   "homepage": "./",
   "build": {
     "appId": "com.app.id",
-    "productName": "Smart Toolbox",
+    "productName": "Smart Toolbox Interface",
     "files": [
       "build/**/*",
       "electron/main.ts",
       "package.json"
     ],
     "extends": null,
-    "mac": {
-      "type": "distribution"
+    "linux": {
+      "target": "AppImage"
     }
   }
 }
