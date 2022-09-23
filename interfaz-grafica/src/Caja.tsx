@@ -14,7 +14,6 @@ export default function Caja() {
             const result = Object.keys(raw_data).map((key) => ({ [key]: raw_data[key] }));
             setCajasArray(result)
         });
-        
     }, []);
 
     const divStyle = {
@@ -51,7 +50,7 @@ export default function Caja() {
                             {cajasArray.map((caja, key) =>
                                 <tr key={key}>
                                     <td>{Object.keys(caja)}</td>
-                                    
+                                    <td>{caja[`${Object.keys(caja)}`]["state"] ? "Encendida" : "Apagada"}</td>
                                 </tr>)}
                         </tbody>
                     </Table>
