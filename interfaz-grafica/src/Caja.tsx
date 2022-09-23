@@ -5,7 +5,6 @@ import Table from "react-bootstrap/Table";
 import db from "./firebase";
 
 export default function Caja() {
-    
     const divStyle = {
         maxWidth: "100vw",
         minHeight: "100vh",
@@ -28,7 +27,14 @@ export default function Caja() {
                 </h2>
                 <Container>
                     <Table striped bordered hover variant="dark">
-                        
+                        <thead>
+                            <tr>
+                                <th>Caja</th>
+                                <th>Estado</th>
+                                <th>Operario</th>
+                                <th>Herramientas faltantes</th>
+                            </tr>
+                        </thead>
                     </Table>
                 </Container>
             </div>
