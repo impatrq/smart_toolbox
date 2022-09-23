@@ -29,7 +29,9 @@ export default function Home() {
     <div style={divStyle}>
       <div style={{ height: "20vh", display: "grid", justifyItems: "center" }}>
         <h1>
-          <strong style={{ textShadow: "1px",color: "#F9F7F7" }}>Interfaz gráfica</strong>
+          <strong style={{ textShadow: "1px", color: "#F9F7F7" }}>
+            Interfaz gráfica
+          </strong>
         </h1>
         <Image
           fluid

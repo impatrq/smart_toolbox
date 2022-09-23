@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { ref, onValue } from "firebase/database";
 import Table from "react-bootstrap/Table";
 import db from "./firebase";
+import HomeButton from "./HomeButton";
 
 export default function Caja() {
   const [cajasArray, setCajasArray] = useState<Object[]>([]);
@@ -44,6 +45,7 @@ export default function Caja() {
   };
   return (
     <div style={divStyle}>
+      <HomeButton />
       <div style={{ display: "grid", placeItems: "center" }}>
         <h2 style={{ color: "#F9F7F7", marginBottom: "3rem" }}>
           Cajas de este sector

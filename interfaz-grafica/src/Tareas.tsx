@@ -7,6 +7,7 @@ import { ListGroup } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import db from "./firebase";
+import HomeButton from "./HomeButton";
 
 export default function Home() {
   const [operarios, setOperarios] = useState<String[]>([]);
@@ -37,8 +38,9 @@ export default function Home() {
   };
   return (
     <div style={divStyle}>
+      <HomeButton />
       <div style={{ display: "grid", placeItems: "center" }}>
-        <h2 style={{color:"#F9F7F7"}}>
+        <h2 style={{ color: "#F9F7F7" }}>
           Añadir tareas para <strong>{operario}</strong>
         </h2>
         <DropdownButton
@@ -76,7 +78,7 @@ export default function Home() {
                 }
               })}
           </ListGroup>
-          <Form.Label style={{color:"#DBE2EF"}}>
+          <Form.Label style={{ color: "#DBE2EF" }}>
             Añadir Tareas para <strong>{operario}</strong>
           </Form.Label>
           <Form.Control
