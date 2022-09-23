@@ -7,6 +7,7 @@ import { Button, Image } from "react-bootstrap";
 import { useState } from "react";
 import { ref, update } from "firebase/database";
 import db from "./firebase";
+import SmartImg from "./img/icono.png";
 
 export default function Home() {
   const [isSwitchOn, setIsSwitchOn] = useState(false);
@@ -36,7 +37,7 @@ export default function Home() {
         <Image
           fluid
           style={{ height: "15rem", width: "auto" }}
-          src="/icono.png"
+          src={SmartImg}
         ></Image>
       </div>
       <Container>

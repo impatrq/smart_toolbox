@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import homeImg from "./img/home.svg";
 
 export default function HomeButton() {
   return (
@@ -24,7 +25,7 @@ export default function HomeButton() {
         <img
           style={{ color: "white", height: "2rem" }}
           alt="home"
-          src="/home.svg"
+          src={homeImg}
         />
       </Link>
     </div>

@@ -1,13 +1,17 @@
 {
   "name": "smart-toolbox-interface",
   "version": "0.1.0",
+  "author": "Federico Torres",
   "private": true,
+  "main": "electron/main.ts",
   "dependencies": {
     "@types/node": "^16.11.39",
     "@types/react": "^18.0.12",
     "@types/react-dom": "^18.0.5",
     "bootstrap": "^5.2.1",
+    "electron-is": "^3.0.0",
     "firebase": "^9.9.4",
+    "history": "^5.3.0",
     "react": "^18.1.0",
     "react-bootstrap": "^2.5.0",
     "react-dom": "^18.1.0",
@@ -18,9 +22,13 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "electron:start": "concurrently \"npm start\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron:build": "npm run build-electron && electron-builder build --publish never",
+    "build": "PUBLIC_URL=/ react-scripts build",
+    "build-electron": "react-scripts build",
+    "electron:build:all": "npm run build-electron && electron-builder build --publish never -wl"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +47,25 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^7.4.0",
+    "electron": "^20.2.0",
+    "electron-builder": "^23.3.3",
+    "wait-on": "^6.0.1"
+  },
+  "homepage": "./",
+  "build": {
+    "appId": "com.app.id",
+    "productName": "Smart Toolbox Interface",
+    "files": [
+      "build/**/*",
+      "electron/main.ts",
+      "package.json"
+    ],
+    "extends": null,
+    "linux": {
+      "target": "AppImage"
+    }
   }
 }
