@@ -1,3 +1,2 @@
-# Smart Toolbox Interface
-
-Esta aplicación web tiene el objetivo de poder controlar las cajas de herramientas en el taller y las actividades de cada operario.
+# Interfaz gráfica
+Esta carpeta contiene el código fuente de la aplicación que le permite al encargado del sector tener control total sobre las cajas y sus operarios
