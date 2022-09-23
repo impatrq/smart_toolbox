@@ -14,7 +14,16 @@ export default function Caja() {
             const result = Object.keys(raw_data).map((key) => ({ [key]: raw_data[key] }));
             setCajasArray(result)
         });
+        const personasRef = ref(db, "sector1/personas");
+        onValue(personasRef, (snapshot) => {
+            const raw_data = snapshot.val();
+            const result2 = Object.keys(raw_data).map((key) => ({ [key]: raw_data[key] }));
+            setPersonasArray(result2)
+        });
     }, []);
+
+    console.log()
+
     const divStyle = {
         maxWidth: "100vw",
         minHeight: "100vh",
@@ -50,6 +59,7 @@ export default function Caja() {
                                 <tr key={key}>
                                     <td>{Object.keys(caja)}</td>
                                     <td>{caja[`${Object.keys(caja)}`]["state"] ? "Encendida" : "Apagada"}</td>
+                                    <td>{personasArray.filter((i) => Object.values(i)[0]["caja"] === Number(Object.keys(caja)) ? true : false).map((a) => Object.keys(a)[0]).join(", ")}</td>
                                     <td>{caja[`${Object.keys(caja)}`]["missing_tools"].split(/\|/gi)
                                         .map((i: String) => i.replace(/^\s+|\s+$/gi, ""))
                                         .join(", ")}
