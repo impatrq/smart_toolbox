@@ -20,7 +20,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "electron:start": "concurrently \"npm start\" \"wait-on http://localhost:3001 && electron .\""
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +40,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^7.4.0",
+    "electron": "^20.2.0",
+    "wait-on": "^6.0.1"
   }
 }
