@@ -1,6 +1,7 @@
 {
   "name": "smart-toolbox-interface",
   "version": "0.1.0",
+  "author": "Federico Torres",
   "private": true,
   "main": "electron/main.ts",
   "dependencies": {
