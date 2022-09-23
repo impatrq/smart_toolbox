@@ -5,6 +5,18 @@ import Table from "react-bootstrap/Table";
 import db from "./firebase";
 
 export default function Caja() {
+    const [cajasArray, setCajasArray] = useState<Object[]>([]);
+    const [personasArray, setPersonasArray] = useState<Object[]>([]);
+    useEffect(() => {
+        const cajasRef = ref(db, "sector1/cajas");
+        onValue(cajasRef, (snapshot) => {
+            const raw_data = snapshot.val();
+            const result = Object.keys(raw_data).map((key) => ({ [key]: raw_data[key] }));
+            setCajasArray(result)
+        });
+        
+    }, []);
+
     const divStyle = {
         maxWidth: "100vw",
         minHeight: "100vh",
@@ -35,6 +47,13 @@ export default function Caja() {
                                 <th>Herramientas faltantes</th>
                             </tr>
                         </thead>
+                        <tbody>
+                            {cajasArray.map((caja, key) =>
+                                <tr key={key}>
+                                    <td>{Object.keys(caja)}</td>
+                                    
+                                </tr>)}
+                        </tbody>
                     </Table>
                 </Container>
             </div>
