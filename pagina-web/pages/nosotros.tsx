@@ -22,28 +22,19 @@ const nosotros: NextPage = () => {
       </div>
       <div className="w-full grid place-items-center">
         <Row className="w-full">
-          <ContactCard
+          {/* <ContactCard
             person="Joaquín Martínez"
             text="Planos y Modelos"
             github="https://github.com/joacozape04"
             email="mailto:joaquinosmartinez@gmail.com"
             ig="https://www.instagram.com/joaquinosmartinez"
-          />
+          /> */}
           <ContactCard
             person="Lucas Herrera"
-            text="Estructura y Circuitos"
+            text="Materiales y Estructura"
             github="https://github.com/lucas-le-herrera"
             email="mailto:lucassherreraa2003@gmail.com"
             ig="https://www.instagram.com/lucas.herreraa.19"
-          />
-        </Row>
-        <Row className="w-full">
-          <ContactCard
-            person="Ramiro Mariani"
-            text="Estructura y Aplicación móvil"
-            github="https://github.com/RamiroMariani"
-            email="mailto:ramiromariani99@gmail.com"
-            ig="https://www.instagram.com/rama_764"
           />
           <ContactCard
             person="Federico Torres"
@@ -53,17 +44,26 @@ const nosotros: NextPage = () => {
             ig="https://www.instagram.com/fede.torres11"
           />
         </Row>
+        <Row className="w-full sm:w-1/2">
+          <ContactCard
+            person="Ramiro Mariani"
+            text="Estructura y Aplicación móvil"
+            github="https://github.com/RamiroMariani"
+            email="mailto:ramiromariani99@gmail.com"
+            ig="https://www.instagram.com/rama_764"
+          />
+        </Row>
         <Row className="w-full">
           <ContactCard
             person="Miqueas Vanore"
-            text="Aplicación móvil"
+            text="Documentación y Diseño"
             github="https://github.com/MiqueasVanore"
             email="mailto:vnmiqueas@gmail.com"
             ig="https://www.instagram.com/miqueasvn"
           />
           <ContactCard
             person="Agustín Esquivel"
-            text="Circuitos y PCB"
+            text="Esquemáticos y placas de circuito impreso"
             github="https://github.com/Agustin-Esquivel04"
             email="mailto:esquivel.agustin04@gmail.com"
             ig="https://www.instagram.com/agus_esquivel_1"
