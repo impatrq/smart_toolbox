@@ -21,11 +21,13 @@ export default function Header() {
           <h2 className="pt-5 display-5 fw-bold">Te damos la bienvenida a</h2>
           <h1 className="display-1 fw-bold">Smart Toolbox</h1>
           <div className="opacity-75 h-75 grid place-items-center">
-            <img
-              className="img-fluid h-auto"
-              src={"/LogoSinFondo1.png"}
-              alt="logo"
-            />
+            <div className="grid place-items-center">
+              <img
+                className="lg:h-[calc(100vh/5.5)] lg:w-[calc(100vw/5.5)] img-fluid h-auto block"
+                src={"/LogoSinFondo1.png"}
+                alt="logo"
+              />
+            </div>
           </div>
         </div>
       </ParallaxLayer>
