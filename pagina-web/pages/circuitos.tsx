@@ -19,15 +19,10 @@ const circuitos: NextPage = () => {
           La placa de control principal está compuesta por:
           <ul className="mt-2 mb-4">
             <li className="my-1">El microcontrolador ESP-WROOM-32</li>
-            <li className="my-1">
-              Dos capacitores del orden de los microfaradios
-            </li>
             <li className="my-1">Un multiplexor 74HC4067</li>
             <li className="my-1">Borneras para los componentes externos</li>
-            <li className="my-1">Un regulador de tensión LM7805</li>
-            <li className="my-1">Un relé 250VAC 15A</li>
-            <li className="my-1">Un transistor BJT</li>
-            <li className="my-1">Un diodo para el relé</li>
+            <li className="my-1">Una fuente step-up mt3608</li>
+            <li className="my-1">Un módulo de relé de 5V</li>
             <li className="my-1">Resistencias varias</li>
           </ul>
           Fuera de la la placa de control principal se encuentran:
@@ -36,8 +31,10 @@ const circuitos: NextPage = () => {
               Microswitches para la detección de herramientas
             </li>
             <li className="my-1">Contactos magnéticos</li>
-            <li className="my-1">Un buzzer 12V</li>
-            <li className="my-1">Una batería de 12VDC</li>
+            <li className="my-1">Una alarma</li>
+            <li className="my-1">Una pila de 3,7V</li>
+            <li className="my-1">Un portapilas</li>
+            <li className="my-1">Un display de batería</li>
           </ul>
         </h3>
         {/* <div className="h-1/2 max-w-full mb-8">
