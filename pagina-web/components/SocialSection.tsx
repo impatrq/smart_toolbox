@@ -21,7 +21,10 @@ export default function SocialSection() {
           <h1 className="display-1 text-white fw-bold">Redes Sociales</h1>
         </Row>
         <Row>
-          <Col className="text-center mx-3" style={{ width: "100%",height: "auto"}}>
+          <Col
+            className="text-center mx-3"
+            style={{ width: "100%", height: "auto" }}
+          >
             <a href="mailto:Smart.Toolbox@proton.me">
               <EmailIcon htmlColor="#ffffffb3" sx={sx} fontSize="large" />
             </a>
@@ -39,7 +42,13 @@ export default function SocialSection() {
             <LinkedInIcon htmlColor="#ffffffb3" sx={sx} fontSize="large" />
           </Col>
           <Col className="text-center mx-3">
-            <InstagramIcon htmlColor="#ffffffb3" sx={sx} fontSize="large" />
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.instagram.com/smart.toolbox.2022"
+            >
+              <InstagramIcon htmlColor="#ffffffb3" sx={sx} fontSize="large" />
+            </a>
           </Col>
         </Row>
       </ParallaxLayer>

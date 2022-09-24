@@ -81,14 +81,14 @@ const funcionamiento: NextPage = () => {
           Interfaz gráfica
         </h4>
         <h3 className="max-w-xl md:text-2xl sm:text-xl text-lg md:px-14 text-center prose sm:leading-9 leading-7 text-white mt-3">
-          La interfaz gráfica permite ver:
+          La interfaz gráfica permite:
           <ol className="mt-3 mb-4 text-xl text-left">
             <li className="my-1">Ver el estado de cada caja</li>
             <li className="my-1">Ver los operario vinculados cada caja</li>
             <li className="my-1">
               Ver las herramientas faltantes de cada caja
             </li>
-            <li className="my-1">Subir las actividades a cada operario</li>
+            <li className="my-1">Subir las actividades de cada operario</li>
             <li className="my-1">Enviar la señal de guardado</li>
           </ol>
         </h3>
