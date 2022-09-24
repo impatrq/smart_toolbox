@@ -1,11 +1,18 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import Typed from "typed.js";
 
 export default function Navigate() {
   const text = useRef(null);
+  const [windowSize, setWindowSize] = useState(0);
   useEffect(() => {
+    setWindowSize(window.innerWidth);
+    const arrow = windowSize > 640 ? "⬇️" : "➡";
     const typed = new Typed(text.current, {
-      strings: ["Desliza horizontalmente para navegar ➡"],
+      strings: [
+        `${
+          windowSize > 640 ? arrow + " " : ""
+        }Desliza horizontalmente para navegar ${arrow}`,
+      ],
       startDelay: 300,
       typeSpeed: 50,
     });
