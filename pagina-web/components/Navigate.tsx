@@ -20,7 +20,7 @@ export default function Navigate() {
     return () => {
       typed.destroy();
     };
-  }, []);
+  }, [windowSize]);
 
   return (
     <h5 ref={text} className="fixed-bottom mb-3 text-white text-center"></h5>
