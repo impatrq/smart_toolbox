@@ -17,7 +17,7 @@ Este proyecto surgió como una variación de otro llamado _Tool Finder_. La prin
 ## ¿Cómo funciona?
 
 Durante la jornada de trabajo, el operario _dispondrá de todas las tareas a realizar en el día en la aplicación móvil_. Estas serán cargadas a través de una página web.
-Después de terminar la jornada de trabajo, el operario deberá guardar todas las herramientas en la caja y, de este modo,  evitar el extravío de éstas. En el caso contrario, al cerrarse alguno de los cajones, el sistema _detectará que faltan herramientas_, avisándole de esto mediante un sonido. Los utensilios faltantes se podrán _visualizar en la aplicacion móvil_.
+Después de terminar la jornada de trabajo, el operario deberá guardar todas las herramientas en la caja y, de este modo, evitar el extravío de éstas. En el caso contrario, al cerrarse alguno de los cajones, el sistema _detectará que faltan herramientas_, avisándole de esto mediante un sonido. Los utensilios faltantes se podrán _visualizar en la aplicacion móvil_.
 
 ## ¿Quiénes somos?
 
@@ -26,33 +26,40 @@ Somos un grupo de alumnos de E.E.S.T. N°7 "Taller Regional Quilmes" (IMPA).
 ## Tecnologías utilizadas
 
 ### Aplicación móvil
-* Ionic con React
-* Typescript
-* Bootstrap
+
+- Ionic con React
+- Typescript
+- Bootstrap
 
 ### Interfaz gráfica
-* Electron
-* React
-* Typescript
-* Bootstrap
+
+- Electron
+- React
+- Typescript
+- Bootstrap
 
 ### Esquemáticos
-* KiCad
+
+- KiCad
 
 ### Página web
-* Next.js
-* Typescript
-* TailwindCSS
-* Bootstrap
+
+- Next.js
+- Typescript
+- TailwindCSS
+- Bootstrap
 
 ### Base de datos
-* Firebase Realtime Database
+
+- Firebase Realtime Database
 
 ### Microcontrolador
-* uPython
+
+- uPython
 
 ### Planos
-* AutoCAD
+
+- AutoCAD
 
 ## Contacto
 
@@ -60,24 +67,32 @@ Somos un grupo de alumnos de E.E.S.T. N°7 "Taller Regional Quilmes" (IMPA).
 
 :globe_with_meridians: Página web: [smart-toolbox.tk](https://www.smart-toolbox.tk/) :globe_with_meridians:
 
+:camera: Instagram: [@smart.toolbox.2022](https://www.instagram.com/smart.toolbox.2022)
+
 ## Integrantes
 
 ### Esquivel, Agustín
+
 📧 esquivel.agustin04@gmail.com
 
 ### Herrera, Lucas
+
 📧 lucassherreraa2003@gmail.com
 
 ### Mariani, Ramiro
+
 📧 ramiromariani99@gmail.com
 
 ### Martínez, Joaquín
+
 📧 joaquinosmartinez@gmail.com
 
 ### Torres, Federico
+
 📧 federicotorres233@protonmail.com
 
-### Vanore, Miqueas 
+### Vanore, Miqueas
+
 📧 vnmiqueas@gmail.com
 
 ## Logros
