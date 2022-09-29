@@ -7,9 +7,6 @@
 from machine import Pin
 import time
 
-##Contador Binario de 4 bits
-count = 0
-
 s0 = Pin(17, Pin.OUT)
 s1 = Pin(16, Pin.OUT)
 s2 = Pin(4, Pin.OUT)
@@ -47,10 +44,8 @@ phillips2 = Herramientas(13, [1, 1, 0, 1], "Phillips 2")
 plano2 = Herramientas(14, [1, 1, 1, 0], "Plano 2")
 metrica = Herramientas(15, [1, 1, 1, 1], "Cinta metrica")
 
-
 def checkDuplicates(tool):
     return tool in missing_tools
-
 
 tools = [
     martillo,
@@ -72,10 +67,6 @@ tools = [
 ]
 
 while True:
-
-    time.sleep(0.5)
-
-    count = 1
 
     for tool in tools:
         if tool.sel[3] == 1:
@@ -103,4 +94,3 @@ while True:
     time.sleep(1)
 
     print(missing_tools)
-
