@@ -16,6 +16,9 @@ s2 = Pin(4, Pin.OUT)
 s3 = Pin(2, Pin.OUT)
 sig = Pin(15, Pin.IN)
 
+alarm = Pin(13, Pin.OUT)
+
+alarm.off()
 missing_tools = []
 
 # Tools constructor
@@ -88,8 +91,10 @@ while True:
         if sig.value():
             if not checkDuplicates(tool.nombre):
                 missing_tools.append(tool.nombre)
+                alarm.on()
         else:
             if checkDuplicates(tool.nombre):
+                alarm.off()
                 missing_tools.remove(tool.nombre)
         s0.off()
         s1.off()
