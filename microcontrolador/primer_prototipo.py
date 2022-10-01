@@ -10,8 +10,8 @@ import network
 import urequests as ureq
 
 # Import environmental variables
-WIFI_SSID = ''
-WIFI_PASSWD = ''
+WIFI_SSID = ""
+WIFI_PASSWD = ""
 DB_ID = ""
 
 # Workspace
@@ -27,7 +27,7 @@ dbURL = f"https://smart-toolbox-{dbId}-default-rtdb.firebaseio.com"
 toolbox = "12537865"
 
 # Headers
-HTTP_HEADERS = {'Content-Type': 'application/json'}
+HTTP_HEADERS = {"Content-Type": "application/json"}
 
 # I/O Ports
 s0 = Pin(17, Pin.OUT)
@@ -41,9 +41,7 @@ alarm.off()
 missing_tools = []
 
 # Tools constructor
-
-
-class Tools():
+class Tools:
     def __init__(self, num, sel, nombre):
         self.num = num
         self.sel = sel
@@ -73,24 +71,28 @@ metrica = Tools(15, [1, 1, 1, 1], "Cinta metrica")
 def checkDuplicates(tool):
     return tool in missing_tools
 
+
 # Connect to the wifi network
 def connectWifi():
     wlan = network.WLAN(network.STA_IF)
     wlan.active(True)
     if not wlan.isconnected():
-        print('connecting to network...')
+        print("connecting to network...")
         wlan.connect(WIFI_SSID, WIFI_PASSWD)
         while not wlan.isconnected():
             time.sleep_ms(1000)
-    print('network config:', wlan.ifconfig())
+    print("network config:", wlan.ifconfig())
+
 
 # REST API get method
 def getReq(param):
     return ureq.get(f"{dbURL}/{area_trabajo}/{param}.json", headers=HTTP_HEADERS).json()
 
+
 # REST API patch method
 def patchReq(param, js):
-    return ureq.patch(f"{dbURL}/{area_trabajo}/{param}.json", json=js ,headers=HTTP_HEADERS).json()
+    return ureq.patch(f"{dbURL}/{area_trabajo}/{param}.json", json=js, headers=HTTP_HEADERS).json()
+
 
 # This makes the tools iterable
 tools = [
@@ -120,8 +122,8 @@ while True:
 
     while not getReq("guardar"):
         print("Waiting for the store signal...")
-        patchReq(f"cajas/{toolbox}",{"missing_tools": "", "state": False})
-        time.sleep(10) # Waits until the store signal arrives
+        patchReq(f"cajas/{toolbox}", {"missing_tools": "", "state": False})
+        time.sleep(10)  # Waits until the store signal arrives
 
     for tool in tools:
         if tool.sel[3] == 1:
@@ -158,5 +160,5 @@ while True:
         time.sleep_ms(50)
 
     time.sleep(1)
-    patchReq(f"cajas/{toolbox}",{"missing_tools": " | ".join(missing_tools), "state": True})
+    patchReq(f"cajas/{toolbox}", {"missing_tools": " | ".join(missing_tools), "state": True})
     print(missing_tools)
