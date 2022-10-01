@@ -24,6 +24,9 @@ dbURL = f"https://smart-toolbox-{dbId}-default-rtdb.firebaseio.com"
 # Toolbox Number
 toolbox = "12537865"
 
+# Headers
+HTTP_HEADERS = {'Content-Type': 'application/json'}
+
 # I/O Ports
 s0 = Pin(17, Pin.OUT)
 s1 = Pin(16, Pin.OUT)
