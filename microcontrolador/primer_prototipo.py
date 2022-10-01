@@ -6,9 +6,10 @@
 
 from machine import Pin
 import time
+import network
 
-# import wifi credentials
-import wifiConfig
+# Import environmental variables
+import env
 
 # Workspace
 area_trabajo = "sector1"
@@ -66,8 +67,19 @@ metrica = Tools(15, [1, 1, 1, 1], "Cinta metrica")
 def checkDuplicates(tool):
     return tool in missing_tools
 
+# Connect to the wifi network
+def connectWifi():
+    wlan = network.WLAN(network.STA_IF)
+    wlan.active(True)
+    if not wlan.isconnected():
+        print('connecting to network...')
+        wlan.connect(env.WIFI_SSID, env.WIFI_SSID)
+        while not wlan.isconnected():
+            time.sleep_ms(100)
+    print('network config:', wlan.ifconfig())
 
-# this makes the tools iterable
+
+# This makes the tools iterable
 tools = [
     martillo,
     fuerza,
@@ -87,8 +99,15 @@ tools = [
     metrica,
 ]
 
+# Connect to the Wifi network
+connectWifi()
+
 # Main event loop
 while True:
+
+    while not wlan.isconnected():
+        # Not connected to internet
+        sleep_ms(1000)
 
     for tool in tools:
         if tool.sel[3] == 1:
