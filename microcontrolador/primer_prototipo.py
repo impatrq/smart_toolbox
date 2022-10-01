@@ -118,6 +118,10 @@ connectWifi()
 # Main event loop
 while True:
 
+    while not getReq("guardar"):
+        print("Waiting for the store signal...")
+        time.sleep(10) # Waits until the store signal arrives
+
     for tool in tools:
         if tool.sel[3] == 1:
             s0.on()
