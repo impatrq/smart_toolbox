@@ -7,6 +7,21 @@
 from machine import Pin
 import time
 
+# import wifi credentials
+import wifiConfig
+
+# Workspace
+area_trabajo = "sector1"
+
+# DB Url Id
+dbId = ""
+
+# DB Url
+dbURL = f"https://smart-toolbox-{dbId}-default-rtdb.firebaseio.com"
+
+# Toolbox Number
+toolbox = "12537865"
+
 # I/O Ports
 s0 = Pin(17, Pin.OUT)
 s1 = Pin(16, Pin.OUT)
