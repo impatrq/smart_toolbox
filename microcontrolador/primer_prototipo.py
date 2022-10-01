@@ -6,6 +6,28 @@
 
 from machine import Pin
 import time
+import network
+import urequests as ureq
+
+# Import environmental variables
+WIFI_SSID = ""
+WIFI_PASSWD = ""
+DB_ID = ""
+
+# Workspace
+area_trabajo = "sector1"
+
+# DB Url Id
+dbId = DB_ID
+
+# DB Url
+dbURL = f"https://smart-toolbox-{dbId}-default-rtdb.firebaseio.com"
+
+# Toolbox Number
+toolbox = "12537865"
+
+# Headers
+HTTP_HEADERS = {"Content-Type": "application/json"}
 
 # I/O Ports
 s0 = Pin(17, Pin.OUT)
@@ -19,9 +41,7 @@ alarm.off()
 missing_tools = []
 
 # Tools constructor
-
-
-class Tools():
+class Tools:
     def __init__(self, num, sel, nombre):
         self.num = num
         self.sel = sel
@@ -40,10 +60,10 @@ punta2 = Tools(7, [0, 1, 1, 1], "Pinza de punta 2")
 loro = Tools(8, [1, 0, 0, 0], "Pico de loro")
 inglesa = Tools(9, [1, 0, 0, 1], "Llave inglesa")
 frenar = Tools(10, [1, 0, 1, 0], "Pinza de frenar")
-phillips1 = Tools(11, [1, 0, 1, 1], "Phillips 1")
-plano1 = Tools(12, [1, 1, 0, 0], "Plano 1")
-phillips2 = Tools(13, [1, 1, 0, 1], "Phillips 2")
-plano2 = Tools(14, [1, 1, 1, 0], "Plano 2")
+phillips1 = Tools(11, [1, 0, 1, 1], "Destornillador Phillips 1")
+plano1 = Tools(12, [1, 1, 0, 0], "Destornillador Plano 1")
+phillips2 = Tools(13, [1, 1, 0, 1], "Destornillador Phillips 2")
+plano2 = Tools(14, [1, 1, 1, 0], "Destornillador Plano 2")
 metrica = Tools(15, [1, 1, 1, 1], "Cinta metrica")
 
 
@@ -52,7 +72,29 @@ def checkDuplicates(tool):
     return tool in missing_tools
 
 
-# this makes the tools iterable
+# Connect to the wifi network
+def connectWifi():
+    wlan = network.WLAN(network.STA_IF)
+    wlan.active(True)
+    if not wlan.isconnected():
+        print("connecting to network...")
+        wlan.connect(WIFI_SSID, WIFI_PASSWD)
+        while not wlan.isconnected():
+            time.sleep_ms(1000)
+    print("network config:", wlan.ifconfig())
+
+
+# REST API get method
+def getReq(param):
+    return ureq.get(f"{dbURL}/{area_trabajo}/{param}.json", headers=HTTP_HEADERS).json()
+
+
+# REST API patch method
+def patchReq(param, js):
+    return ureq.patch(f"{dbURL}/{area_trabajo}/{param}.json", json=js, headers=HTTP_HEADERS).json()
+
+
+# This makes the tools iterable
 tools = [
     martillo,
     fuerza,
@@ -72,8 +114,16 @@ tools = [
     metrica,
 ]
 
+# Connect to the Wifi network
+connectWifi()
+
 # Main event loop
 while True:
+
+    while not getReq("guardar"):
+        print("Waiting for the store signal...")
+        patchReq(f"cajas/{toolbox}", {"missing_tools": "", "state": False})
+        time.sleep(10)  # Waits until the store signal arrives
 
     for tool in tools:
         if tool.sel[3] == 1:
@@ -85,27 +135,30 @@ while True:
         if tool.sel[0] == 1:
             s3.on()
 
-        # ! This delay ensures a effective multiplexer switching
-        time.sleep_ms(50)
+        print(tool.sel)
 
-        print(str(s3.value()) + str(s2.value()) +
-              str(s1.value()) + str(s0.value()))
+        # ! This delay ensures an effective multiplexer switching
+        time.sleep_ms(100)
 
         if sig.value():
             # * The tool is not in its place
             if not checkDuplicates(tool.nombre):
                 missing_tools.append(tool.nombre)
                 alarm.on()
+                print(tool.nombre)
         else:
             # * The tool is in its place
             if checkDuplicates(tool.nombre):
-                alarm.off()
                 missing_tools.remove(tool.nombre)
+                alarm.off()
+
+        time.sleep_ms(50)
         s0.off()
         s1.off()
         s2.off()
         s3.off()
+        time.sleep_ms(50)
 
     time.sleep(1)
-
+    patchReq(f"cajas/{toolbox}", {"missing_tools": " | ".join(missing_tools), "state": True})
     print(missing_tools)
