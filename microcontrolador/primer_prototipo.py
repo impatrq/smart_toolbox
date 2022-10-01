@@ -120,6 +120,7 @@ while True:
 
     while not getReq("guardar"):
         print("Waiting for the store signal...")
+        patchReq(f"cajas/{toolbox}",{"missing_tools": "", "state": False})
         time.sleep(10) # Waits until the store signal arrives
 
     for tool in tools:
