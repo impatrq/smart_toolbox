@@ -10,13 +10,15 @@ import network
 import urequests as ureq
 
 # Import environmental variables
-import env
+WIFI_SSID = ''
+WIFI_PASSWD = ''
+DB_ID = ""
 
 # Workspace
 area_trabajo = "sector1"
 
 # DB Url Id
-dbId = ""
+dbId = DB_ID
 
 # DB Url
 dbURL = f"https://smart-toolbox-{dbId}-default-rtdb.firebaseio.com"
@@ -77,9 +79,9 @@ def connectWifi():
     wlan.active(True)
     if not wlan.isconnected():
         print('connecting to network...')
-        wlan.connect(env.WIFI_SSID, env.WIFI_SSID)
+        wlan.connect(WIFI_SSID, WIFI_PASSWD)
         while not wlan.isconnected():
-            time.sleep_ms(100)
+            time.sleep_ms(1000)
     print('network config:', wlan.ifconfig())
 
 # REST API get method
@@ -126,27 +128,30 @@ while True:
         if tool.sel[0] == 1:
             s3.on()
 
-        # ! This delay ensures a effective multiplexer switching
-        time.sleep_ms(50)
+        print(tool.sel)
 
-        print(str(s3.value()) + str(s2.value()) +
-              str(s1.value()) + str(s0.value()))
+        # ! This delay ensures an effective multiplexer switching
+        time.sleep_ms(100)
 
         if sig.value():
             # * The tool is not in its place
             if not checkDuplicates(tool.nombre):
                 missing_tools.append(tool.nombre)
                 alarm.on()
+                print(tool.nombre)
         else:
             # * The tool is in its place
             if checkDuplicates(tool.nombre):
-                alarm.off()
                 missing_tools.remove(tool.nombre)
+                alarm.off()
+
+        time.sleep_ms(50)
         s0.off()
         s1.off()
         s2.off()
         s3.off()
+        time.sleep_ms(50)
 
     time.sleep(1)
-
+    patchReq(f"cajas/{toolbox}",{"missing_tools": " | ".join(missing_tools), "state": True})
     print(missing_tools)
