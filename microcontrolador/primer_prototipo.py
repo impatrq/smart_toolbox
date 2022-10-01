@@ -7,6 +7,7 @@
 from machine import Pin
 import time
 import network
+import urequests as ureq
 
 # Import environmental variables
 import env
@@ -78,6 +79,13 @@ def connectWifi():
             time.sleep_ms(100)
     print('network config:', wlan.ifconfig())
 
+# REST API get method
+def getReq(param):
+    return ureq.get(f"{dbURL}/{area_trabajo}/{param}.json", headers=HTTP_HEADERS).json()
+
+# REST API patch method
+def patchReq(param, js):
+    return ureq.patch(f"{dbURL}/{area_trabajo}/{param}.json", json=js ,headers=HTTP_HEADERS).json()
 
 # This makes the tools iterable
 tools = [
@@ -104,10 +112,6 @@ connectWifi()
 
 # Main event loop
 while True:
-
-    while not wlan.isconnected():
-        # Not connected to internet
-        sleep_ms(1000)
 
     for tool in tools:
         if tool.sel[3] == 1:
