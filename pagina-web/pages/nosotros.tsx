@@ -22,13 +22,6 @@ const nosotros: NextPage = () => {
       </div>
       <div className="w-full grid place-items-center">
         <Row className="w-full">
-          {/* <ContactCard
-            person="Joaquín Martínez"
-            text="Planos y Modelos"
-            github="https://github.com/joacozape04"
-            email="mailto:joaquinosmartinez@gmail.com"
-            ig="https://www.instagram.com/joaquinosmartinez"
-          /> */}
           <ContactCard
             person="Lucas Herrera"
             text="Materiales y Estructura"
@@ -38,15 +31,23 @@ const nosotros: NextPage = () => {
             li="https://www.linkedin.com/in/lucas-herrera-610780235"
           />
           <ContactCard
-            person="Federico Torres"
-            text="Microcontrolador, Interfaz gráfica y Página web"
-            github="https://github.com/federicotorres233"
-            email="mailto:federicotorres233@protonmail.com"
-            ig="https://www.instagram.com/fede.torres11"
-            li="https://www.linkedin.com/in/federico-ivan-torres-b51a73241"
+            person="Miqueas Vanore"
+            text="Documentación y Diseño"
+            github="https://github.com/MiqueasVanore"
+            email="mailto:vnmiqueas@gmail.com"
+            ig="https://www.instagram.com/miqueasvn"
+            li="#"
           />
         </Row>
-        <Row className="w-full sm:w-1/2">
+        <Row className="w-full">
+          <ContactCard
+            person="Joaquín Martínez"
+            text="Planos y Modelos"
+            github="https://github.com/joacozape04"
+            email="mailto:joaquinosmartinez@gmail.com"
+            ig="https://www.instagram.com/joaquinosmartinez"
+            li=""
+          />
           <ContactCard
             person="Ramiro Mariani"
             text="Estructura y Aplicación móvil"
@@ -58,12 +59,12 @@ const nosotros: NextPage = () => {
         </Row>
         <Row className="w-full">
           <ContactCard
-            person="Miqueas Vanore"
-            text="Documentación y Diseño"
-            github="https://github.com/MiqueasVanore"
-            email="mailto:vnmiqueas@gmail.com"
-            ig="https://www.instagram.com/miqueasvn"
-            li="#"
+            person="Federico Torres"
+            text="Microcontrolador, Interfaz gráfica y Página web"
+            github="https://github.com/federicotorres233"
+            email="mailto:federicotorres233@protonmail.com"
+            ig="https://www.instagram.com/fede.torres11"
+            li="https://www.linkedin.com/in/federico-ivan-torres-b51a73241"
           />
           <ContactCard
             person="Agustín Esquivel"
