@@ -14,7 +14,8 @@ const circuitos: NextPage = () => {
         <h4 className="text-center mb-7 text-white text-2xl">
           Placa principal
         </h4>
-        <img className="rounded-lg img-fluid" src={"/circuito.jpg"} />
+        <img className="rounded-lg img-fluid" src={"/circuito.png"} />
+        <img className="rounded-lg img-fluid mt-3" src={"/pcb.png"} />
         <h3 className="prose text-xl text-white mt-7">
           La placa de control principal está compuesta por:
           <ul className="mt-2 mb-4">
@@ -22,7 +23,7 @@ const circuitos: NextPage = () => {
             <li className="my-1">Un multiplexor 74HC4067</li>
             <li className="my-1">Borneras para los componentes externos</li>
             <li className="my-1">Una fuente step-up mt3608</li>
-            <li className="my-1">Un módulo de relé de 5V</li>
+            <li className="my-1">Un transistor BJT</li>
             <li className="my-1">Resistencias varias</li>
           </ul>
           Fuera de la la placa de control principal se encuentran:
