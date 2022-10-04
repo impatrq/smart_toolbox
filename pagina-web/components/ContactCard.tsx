@@ -25,7 +25,7 @@ export default function ContactCard({ person, text, github, email, ig, li }) {
             target="_blank"
             rel="noreferrer"
             href={github}
-            className="hover:scale-110"
+            className="mx-1 hover:scale-110"
           >
             <GitHub htmlColor="#000000" sx={sx} fontSize="large" />
           </a>
@@ -33,7 +33,7 @@ export default function ContactCard({ person, text, github, email, ig, li }) {
             target="_blank"
             rel="noreferrer"
             href={email}
-            className="ml-3 hover:scale-110"
+            className="mx-1 hover:scale-110"
           >
             <Email htmlColor="#000000" sx={sx} fontSize="large" />
           </a>
@@ -41,7 +41,7 @@ export default function ContactCard({ person, text, github, email, ig, li }) {
             target="_blank"
             rel="noreferrer"
             href={ig}
-            className="ml-3 hover:scale-110"
+            className="mx-1 hover:scale-110"
           >
             <Instagram htmlColor="#000000" sx={sx} fontSize="large" />
           </a>
@@ -49,7 +49,7 @@ export default function ContactCard({ person, text, github, email, ig, li }) {
             target="_blank"
             rel="noreferrer"
             href={li}
-            className="ml-3 hover:scale-110"
+            className="mx-1 hover:scale-110"
           >
             <LinkedIn htmlColor="#000000" sx={sx} fontSize="large" />
           </a>

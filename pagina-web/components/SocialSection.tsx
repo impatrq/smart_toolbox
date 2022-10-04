@@ -2,7 +2,7 @@ import { ParallaxLayer } from "@react-spring/parallax";
 import classes from "../styles/SocialSection.module.css";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import SpaceAppsIcon from "@mui/icons-material/RocketLaunch";
 import { Row, Col } from "react-bootstrap";
 import InstagramIcon from "@mui/icons-material/Instagram";
 
@@ -39,7 +39,13 @@ export default function SocialSection() {
             </a>
           </Col>
           <Col className="text-center mx-3">
-            <LinkedInIcon htmlColor="#ffffffb3" sx={sx} fontSize="large" />
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://2022.spaceappschallenge.org/challenges/2022-challenges/create-your-own-challenge/teams/smart-toolbox/project"
+            >
+              <SpaceAppsIcon htmlColor="#ffffffb3" sx={sx} fontSize="large" />
+            </a>
           </Col>
           <Col className="text-center mx-3">
             <a
