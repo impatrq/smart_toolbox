@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
-import Caja from "./Caja";
-import Home from "./Home";
-import Tareas from "./Tareas";
+import Caja from "./pages/Caja";
+import Home from "./pages/Home";
+import Tareas from "./pages/Tareas";
 
 function App() {
   return (
