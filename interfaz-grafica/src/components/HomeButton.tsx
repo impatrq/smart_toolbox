@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import homeImg from "./img/home.svg";
+import homeImg from "../img/home.svg";
 
 export default function HomeButton() {
   return (

@@ -6,8 +6,8 @@ import Form from "react-bootstrap/Form";
 import { Button, Image } from "react-bootstrap";
 import { useState } from "react";
 import { ref, update } from "firebase/database";
-import db from "./firebase";
-import SmartImg from "./img/icono.png";
+import db from "../firebase";
+import SmartImg from "../img/icono.png";
 
 export default function Home() {
   const [isSwitchOn, setIsSwitchOn] = useState(false);
