@@ -62,11 +62,6 @@ const Caja: React.FC = () => {
         >
           Ingrese una Caja
         </IonButton>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Caja</IonTitle>
-          </IonToolbar>
-        </IonHeader>
       </IonContent>
     </IonPage>
   );
