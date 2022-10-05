@@ -2,8 +2,9 @@ import Container from "react-bootstrap/Container";
 import { useState, useEffect } from "react";
 import { ref, onValue } from "firebase/database";
 import Table from "react-bootstrap/Table";
-import db from "./firebase";
-import HomeButton from "./HomeButton";
+import db from "../firebase";
+import HomeButton from "../components/HomeButton";
+import AddToolboxModal from "../components/AddToolboxModal";
 
 export default function Caja() {
   const [cajasArray, setCajasArray] = useState<Object[]>([]);
@@ -35,21 +36,14 @@ export default function Caja() {
     display: "grid",
     "place-items": "center",
   };
-  const itemStyle = { display: "grid", "place-items": "center" };
-  const link = {
-    display: "grid",
-    "place-items": "center",
-    width: "100%",
-    color: "black",
-    textDecoration: "none",
-  };
   return (
     <div style={divStyle}>
       <HomeButton />
       <div style={{ display: "grid", placeItems: "center" }}>
-        <h2 style={{ color: "#F9F7F7", marginBottom: "3rem" }}>
+        <h2 style={{ color: "#F9F7F7", marginBottom: "1rem" }}>
           Cajas de este sector
         </h2>
+        <AddToolboxModal />
         <Container>
           <Table striped bordered hover variant="dark">
             <thead>
@@ -73,7 +67,7 @@ export default function Caja() {
                     {personasArray
                       .filter((i) =>
                         Object.values(i)[0]["caja"] ===
-                        Number(Object.keys(caja))
+                          Number(Object.keys(caja))
                           ? true
                           : false
                       )
