@@ -1,15 +1,12 @@
 import {
   IonButton,
   IonContent,
-  IonHeader,
-  IonPage,
-  IonTitle,
-  IonToolbar,
+  IonPage
 } from "@ionic/react";
 import "./Caja.css";
 import db from "../../firebase.js";
 import { update, ref } from "firebase/database";
-import LoginButton from "../../auth/LoginButton";
+import HeaderBar from "../../components/HeaderBar";
 import { useCajaContext } from "../../contexts/CajaContext";
 import { useUsuarioContext } from "../../contexts/UsuarioContext";
 import { BarcodeScanner } from "@awesome-cordova-plugins/barcode-scanner";
@@ -37,21 +34,7 @@ const Caja: React.FC = () => {
 
   return (
     <IonPage>
-      <IonHeader style={{ display: "flex", justifyItems: "space-between" }}>
-        <IonToolbar>
-          <IonTitle>Caja</IonTitle>
-        </IonToolbar>
-        <div
-          style={{
-            backgroundColor: "#1f1f1f",
-            height: "100%",
-            display: "grid",
-            placeItems: "center",
-          }}
-        >
-          <LoginButton />
-        </div>
-      </IonHeader>
+      <HeaderBar name="Caja"/>
       <IonContent fullscreen>
         <IonButton
           class="B_registro"

@@ -1,18 +1,15 @@
 import {
   IonCheckbox,
   IonContent,
-  IonHeader,
   IonItem,
   IonLabel,
   IonList,
   IonPage,
-  IonTitle,
-  IonToolbar,
 } from "@ionic/react";
 import db from "../../firebase.js";
 import { useState, useEffect } from "react";
 import { ref, onValue } from "firebase/database";
-import LoginButton from "../../auth/LoginButton";
+import HeaderBar from "../../components/HeaderBar";
 import { useUsuarioContext } from "../../contexts/UsuarioContext";
 
 const checkboxList: Array<{ val: String; isChecked: boolean }> = [];
@@ -46,21 +43,7 @@ const Tareas: React.FC = () => {
 
   return (
     <IonPage>
-      <IonHeader style={{ display: "flex", justifyItems: "space-between" }}>
-        <IonToolbar>
-          <IonTitle>Tareas</IonTitle>
-        </IonToolbar>
-        <div
-          style={{
-            backgroundColor: "#1f1f1f",
-            height: "100%",
-            display: "grid",
-            placeItems: "center",
-          }}
-        >
-          <LoginButton />
-        </div>
-      </IonHeader>
+      <HeaderBar name="Tareas" />
       <IonContent fullscreen>
         <IonList>
           {list.map((item, i) => (
