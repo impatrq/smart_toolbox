@@ -6,8 +6,9 @@ import { ref, update, onValue } from "firebase/database";
 import { ListGroup } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import db from "./firebase";
-import HomeButton from "./HomeButton";
+import db from "../firebase";
+import HomeButton from "../components/HomeButton";
+import AddUserModal from "../components/AddUserModal";
 
 export default function Home() {
   const [operarios, setOperarios] = useState<String[]>([]);
@@ -62,6 +63,10 @@ export default function Home() {
               {i}
             </Dropdown.Item>
           ))}
+          <Dropdown.Divider />
+          <Dropdown.Item>
+            <AddUserModal />
+          </Dropdown.Item>
         </DropdownButton>
         <Container>
           <ListGroup as="ol" numbered style={{ marginBottom: "3rem" }}>
