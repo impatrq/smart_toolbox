@@ -5,6 +5,7 @@ import {
   IonPage,
   IonTitle,
   IonToolbar,
+  useIonAlert
 } from "@ionic/react";
 import { BarcodeScanner } from "@awesome-cordova-plugins/barcode-scanner";
 import "./Caja.css";
@@ -26,13 +27,23 @@ interface barCode {
 const Caja: React.FC = () => {
   const { user } = useUsuarioContext();
   const { setCaja } = useCajaContext();
+  const [presentAlert] = useIonAlert();
+
   const openScanner = async () => {
-    const data = await BarcodeScanner.scan();
-    setCaja(Number(data.text));
-    const obj: barCode = {};
-    const url: string = `/sector1/personas/${user}/caja`;
-    obj[url] = Number(data.text);
-    update(ref(db), obj);
+    if (user !== "") {
+      const data = await BarcodeScanner.scan();
+      setCaja(Number(data.text));
+      const obj: barCode = {};
+      const url: string = `/sector1/personas/${user}/caja`;
+      obj[url] = Number(data.text);
+      update(ref(db), obj);
+    } else {
+      presentAlert({
+        header: 'Importante',
+        message: 'Debes ingresar tu nombre y apellido antes de escanear un QR',
+        buttons: ['Perfecto'],
+      })
+    }
   };
 
   return (
