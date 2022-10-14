@@ -46,7 +46,7 @@ export default function Home() {
         </h2>
         <DropdownButton
           id="dropdown-button-dark-example2"
-          variant="success"
+          variant="secondary"
           menuVariant="dark"
           title="Elegir un operario"
           className="mt-2"
@@ -96,7 +96,8 @@ export default function Home() {
           />
           <Button
             style={{ width: "100%", marginTop: "2rem", marginBottom: "2rem" }}
-            variant="warning"
+            variant="success"
+            size="lg"
             onClick={() => {
               const misTareas = tareas[`${operario}`]?.tareas;
               const obj = {};
