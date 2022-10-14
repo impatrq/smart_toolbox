@@ -11,9 +11,9 @@ import HomeButton from "../components/HomeButton";
 import AddUserModal from "../components/AddUserModal";
 
 export default function Home() {
-  const [operarios, setOperarios] = useState<String[]>([]);
-  const [operario, setOperario] = useState<String>("");
-  const [agregar, setAgregar] = useState<String>("");
+  const [operarios, setOperarios] = useState<string[]>([]);
+  const [operario, setOperario] = useState<string>("");
+  const [agregar, setAgregar] = useState<string>("");
   const [tareas, setTareas] = useState<Object[]>([]);
   useEffect(() => {
     const personasRef = ref(db, "sector1/personas");
@@ -89,6 +89,7 @@ export default function Home() {
           <Form.Control
             type="text"
             placeholder={`Ingrese una tarea para ${operario}`}
+            value={agregar}
             onChange={(e) => {
               setAgregar(e.target.value);
             }}
@@ -111,6 +112,7 @@ export default function Home() {
                   update(ref(db), obj);
                 }
               }
+              setAgregar("");
             }}
           >
             Subir tareas
