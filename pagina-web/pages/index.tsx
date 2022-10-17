@@ -7,7 +7,7 @@ import { NextPage } from "next";
 const Home: NextPage = () => {
   return (
     <>
-      <Parallax pages={3} horizontal className="bg-gradient-to-br to-sky-900 from-indigo-900">
+      <Parallax pages={3} className="bg-gradient-to-br to-sky-900 from-indigo-900">
         <Header />
         <MainPageSections />
         <SocialSection />
