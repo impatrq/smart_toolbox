@@ -21,38 +21,49 @@ export default function ContactCard({ person, text, github, email, ig, li }) {
         </Card.Header>
         <Card.Body>
           <Card.Text className="text-black font-semibold">{text}</Card.Text>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href={github}
-            className="mx-1 hover:scale-110"
-          >
-            <GitHub htmlColor="#000000" sx={sx} fontSize="large" />
-          </a>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href={email}
-            className="mx-1 hover:scale-110"
-          >
-            <Email htmlColor="#000000" sx={sx} fontSize="large" />
-          </a>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href={ig}
-            className="mx-1 hover:scale-110"
-          >
-            <Instagram htmlColor="#000000" sx={sx} fontSize="large" />
-          </a>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href={li}
-            className="mx-1 hover:scale-110"
-          >
-            <LinkedIn htmlColor="#000000" sx={sx} fontSize="large" />
-          </a>
+          {github == "" ? null : (
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href={github}
+              className="mx-1 hover:scale-110"
+            >
+              <GitHub htmlColor="#000000" sx={sx} fontSize="large" />
+            </a>
+          )}
+
+          {email == "" ? null : (
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href={email}
+              className="mx-1 hover:scale-110"
+            >
+              <Email htmlColor="#000000" sx={sx} fontSize="large" />
+            </a>
+          )}
+
+          {ig == "" ? null : (
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href={ig}
+              className="mx-1 hover:scale-110"
+            >
+              <Instagram htmlColor="#000000" sx={sx} fontSize="large" />
+            </a>
+          )}
+
+          {li == "" ? null : (
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href={li}
+              className="mx-1 hover:scale-110"
+            >
+              <LinkedIn htmlColor="#000000" sx={sx} fontSize="large" />
+            </a>
+          )}
         </Card.Body>
       </Card>
     </Col>
