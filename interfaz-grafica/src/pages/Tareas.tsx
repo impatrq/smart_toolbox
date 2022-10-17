@@ -11,9 +11,9 @@ import HomeButton from "../components/HomeButton";
 import AddUserModal from "../components/AddUserModal";
 
 export default function Home() {
-  const [operarios, setOperarios] = useState<String[]>([]);
-  const [operario, setOperario] = useState<String>("");
-  const [agregar, setAgregar] = useState<String>("");
+  const [operarios, setOperarios] = useState<string[]>([]);
+  const [operario, setOperario] = useState<string>("");
+  const [agregar, setAgregar] = useState<string>("");
   const [tareas, setTareas] = useState<Object[]>([]);
   useEffect(() => {
     const personasRef = ref(db, "sector1/personas");
@@ -46,7 +46,7 @@ export default function Home() {
         </h2>
         <DropdownButton
           id="dropdown-button-dark-example2"
-          variant="success"
+          variant="secondary"
           menuVariant="dark"
           title="Elegir un operario"
           className="mt-2"
@@ -89,13 +89,15 @@ export default function Home() {
           <Form.Control
             type="text"
             placeholder={`Ingrese una tarea para ${operario}`}
+            value={agregar}
             onChange={(e) => {
               setAgregar(e.target.value);
             }}
           />
           <Button
             style={{ width: "100%", marginTop: "2rem", marginBottom: "2rem" }}
-            variant="warning"
+            variant="success"
+            size="lg"
             onClick={() => {
               const misTareas = tareas[`${operario}`]?.tareas;
               const obj = {};
@@ -111,6 +113,7 @@ export default function Home() {
                   update(ref(db), obj);
                 }
               }
+              setAgregar("");
             }}
           >
             Subir tareas

@@ -9,7 +9,7 @@ import time
 import network
 import urequests as ureq
 
-# Import environmental variables
+# Environmental variables
 WIFI_SSID = ""
 WIFI_PASSWD = ""
 DB_ID = ""
@@ -140,7 +140,7 @@ while True:
         # ! This delay ensures an effective multiplexer switching
         time.sleep_ms(100)
 
-        if sig.value():
+        if not sig.value():
             # * The tool is not in its place
             if not checkDuplicates(tool.nombre):
                 missing_tools.append(tool.nombre)

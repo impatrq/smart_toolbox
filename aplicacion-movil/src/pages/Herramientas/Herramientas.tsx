@@ -39,9 +39,10 @@ const Herramientas: React.FC = () => {
       <IonContent fullscreen>
         <IonList>
           {list.map((item, i) => (
-            <IonItem color="secondary" key={i}>
-              <IonLabel>{item.val}</IonLabel>
-            </IonItem>
+            item.val === "" ? null :
+              <IonItem color="secondary" key={i}>
+                <IonLabel>{item.val}</IonLabel>
+              </IonItem>
           ))}
         </IonList>
       </IonContent>
