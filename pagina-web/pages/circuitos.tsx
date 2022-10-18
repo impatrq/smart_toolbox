@@ -14,7 +14,8 @@ const circuitos: NextPage = () => {
         <h4 className="text-center mb-7 text-white text-2xl">
           Placa principal
         </h4>
-        <img className="rounded-lg img-fluid" src={"/circuito.png"} />
+        <img className="rounded-lg img-fluid" src={"/pcb2.jpg"} />
+        <img className="rounded-lg img-fluid mt-3" src={"/circuito.png"} />
         <img className="rounded-lg img-fluid mt-3" src={"/pcb.png"} />
         <h3 className="prose text-xl text-white mt-7">
           La placa de control principal está compuesta por:

@@ -36,21 +36,21 @@ const nosotros: NextPage = () => {
             github="https://github.com/MiqueasVanore"
             email="mailto:vnmiqueas@gmail.com"
             ig="https://www.instagram.com/miqueasvn"
-            li="#"
+            li=""
           />
         </Row>
         <Row className="w-full">
           <ContactCard
-            person="Joaquín Martínez"
-            text="Planos y Modelos"
-            github="https://github.com/joacozape04"
-            email="mailto:joaquinosmartinez@gmail.com"
-            ig="https://www.instagram.com/joaquinosmartinez"
+            person="Thomas Kaufmann"
+            text="PCB y microcontrolador"
+            github="#"
+            email="#"
+            ig="#"
             li=""
           />
           <ContactCard
             person="Ramiro Mariani"
-            text="Estructura y Aplicación móvil"
+            text="Estructura, Aplicación móvil y PCB"
             github="https://github.com/RamiroMariani"
             email="mailto:ramiromariani99@gmail.com"
             ig="https://www.instagram.com/rama_764"
@@ -72,7 +72,7 @@ const nosotros: NextPage = () => {
             github="https://github.com/Agustin-Esquivel04"
             email="mailto:esquivel.agustin04@gmail.com"
             ig="https://www.instagram.com/agus_esquivel_1"
-            li="#"
+            li=""
           />
         </Row>
       </div>

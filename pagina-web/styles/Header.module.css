@@ -11,5 +11,5 @@
 }
 
 .main {
-  height: 80%;
+  height: calc(100vh*0.8);
 }

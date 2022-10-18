@@ -20,7 +20,7 @@ export default function SocialSection() {
         <Row className="text-center">
           <h1 className="display-1 text-white fw-bold">Redes Sociales</h1>
         </Row>
-        <Row>
+        <Row className="my-3">
           <Col
             className="text-center mx-3"
             style={{ width: "100%", height: "auto" }}
