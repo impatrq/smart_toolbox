@@ -83,10 +83,6 @@ Somos un grupo de alumnos de E.E.S.T. N°7 "Taller Regional Quilmes" (IMPA).
 
 📧 ramiromariani99@gmail.com
 
-### Martínez, Joaquín
-
-📧 joaquinosmartinez@gmail.com
-
 ### Torres, Federico
 
 📧 federicotorres233@protonmail.com
