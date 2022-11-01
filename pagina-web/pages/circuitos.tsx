@@ -25,7 +25,7 @@ const circuitos: NextPage = () => {
             <li className="my-1">Borneras para los componentes externos</li>
             <li className="my-1">Una fuente step-up mt3608</li>
             <li className="my-1">Un transistor BJT</li>
-            <li className="my-1">Resistencias varias</li>
+            <li className="my-1">Resistencias pull-up y pull-down</li>
           </ul>
           Fuera de la la placa de control principal se encuentran:
           <ul className="my-2">
@@ -33,10 +33,10 @@ const circuitos: NextPage = () => {
               Microswitches para la detección de herramientas
             </li>
             <li className="my-1">Contactos magnéticos</li>
-            <li className="my-1">Una alarma</li>
+            <li className="my-1">Un buzzer de 24V (alarma)</li>
             <li className="my-1">Una pila de 3,7V</li>
             <li className="my-1">Un portapilas</li>
-            <li className="my-1">Un display de batería</li>
+            <li className="my-1">Un cargador de pila</li>
           </ul>
         </h3>
         {/* <div className="h-1/2 max-w-full mb-8">
