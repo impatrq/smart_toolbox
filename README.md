@@ -4,11 +4,19 @@
 
 <img src="https://user-images.githubusercontent.com/80327788/190393898-d13cce88-e29e-45da-8dda-b5642c21e2eb.png" height="400" width="400" />
 
+&nbsp;
+
+| Página web | Email | Instagram |
+|------------|-------|-----------|
+|[smart-toolbox.tk](https://www.smart-toolbox.tk/)|smart.toolbox@proton.me|[@smart.toolbox.2022](https://www.instagram.com/smart.toolbox.2022)|
+
+&nbsp;
+
 </div>
 
 ## ¿Qué es Smart Toolbox?
 
-Smart Toolbox, es un producto que ofrecemos para brindar un nuevo _sistema de orden y seguimiento de herramientas en el espacio de trabajo_, para así _prevenir accidentes_ o _perdidas de dinero en bienes laborales_. También, poseerá una _lista de actividades_ que le brindará al trabajador una mayor comodidad, además de reducir el margen de error por un olvido.
+Smart Toolbox aborda la problemática de los _errores humanos_ en los entornos de trabajo con _herramientas_, que pueden producir _accidentes_ y/o _costos_ adicionales. Con la ayuda de diversas tecnologías creamos un sistema que permite tener un mayor control sobre las herramientas en un taller, reduciendo así el _riesgo de un siniestro_.
 
 ## ¿De dónde surgió la idea?
 
@@ -17,11 +25,35 @@ Este proyecto surgió como una variación de otro llamado _Tool Finder_. La prin
 ## ¿Cómo funciona?
 
 Durante la jornada de trabajo, el operario _dispondrá de todas las tareas a realizar en el día en la aplicación móvil_. Estas serán cargadas a través de una página web.
-Después de terminar la jornada de trabajo, el operario deberá guardar todas las herramientas en la caja y, de este modo, evitar el extravío de éstas. En el caso contrario, al cerrarse alguno de los cajones, el sistema _detectará que faltan herramientas_, avisándole de esto mediante un sonido. Los utensilios faltantes se podrán _visualizar en la aplicacion móvil_.
+Después de terminar la jornada de trabajo, el operario deberá guardar todas las herramientas en la caja y, de este modo, evitar el extravío de éstas. En el caso contrario, al cerrarse alguno de los cajones, el sistema _detectará que faltan herramientas_, avisándole de esto mediante un sonido. Los utensilios faltantes se podrán _visualizar en una aplicacion móvil_ vinculada a la caja y en una _interfaz gráfica_.
 
 ## ¿Quiénes somos?
 
 Somos un grupo de alumnos de E.E.S.T. N°7 "Taller Regional Quilmes" (IMPA).
+
+### Esquivel, Agustín
+
+--> 📧 esquivel.agustin04@gmail.com
+
+### Herrera, Lucas
+
+--> 📧 lucassherreraa2003@gmail.com
+
+### Mariani, Ramiro
+
+--> 📧 ramiromariani99@gmail.com
+
+### Martínez Joaquín
+
+--> 📧 joaquinosmartinez@gmail.com
+
+### Torres, Federico
+
+--> 📧 federicotorres233@protonmail.com
+
+### Vanore, Miqueas
+
+--> 📧 vnmiqueas@gmail.com
 
 ## Tecnologías utilizadas
 
@@ -61,42 +93,12 @@ Somos un grupo de alumnos de E.E.S.T. N°7 "Taller Regional Quilmes" (IMPA).
 
 - AutoCAD
 
-## Contacto
-
-:email: Email: smart.toolbox@proton.me :email:
-
-:globe_with_meridians: Página web: [smart-toolbox.tk](https://www.smart-toolbox.tk/) :globe_with_meridians:
-
-:camera: Instagram: [@smart.toolbox.2022](https://www.instagram.com/smart.toolbox.2022)
-
-## Integrantes
-
-### Esquivel, Agustín
-
-📧 esquivel.agustin04@gmail.com
-
-### Herrera, Lucas
-
-📧 lucassherreraa2003@gmail.com
-
-### Mariani, Ramiro
-
-📧 ramiromariani99@gmail.com
-
-### Torres, Federico
-
-📧 federicotorres233@protonmail.com
-
-### Vanore, Miqueas
-
-📧 vnmiqueas@gmail.com
-
 ## Logros
 
 <div align="center">
 
-<img src="https://user-images.githubusercontent.com/80325042/173058773-10536f29-a62f-47c6-b096-5031df86fdc2.png" width="100"/>
+### 🥇 Primer puesto en Prototipos II 🥇
 
-Por Desbloquear
+<img src="https://user-images.githubusercontent.com/80338970/199357533-d803c311-e02a-4d89-8d17-c61802c57827.jpg"/>
 
 </div>
