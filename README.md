@@ -97,8 +97,8 @@ Somos un grupo de alumnos de E.E.S.T. N°7 "Taller Regional Quilmes" (IMPA).
 
 <div align="center">
 
-<img src="https://user-images.githubusercontent.com/80325042/173058773-10536f29-a62f-47c6-b096-5031df86fdc2.png" width="100"/>
+### 🥇 Primer puesto en Prototipos II 🥇
 
-Por Desbloquear
+<img src="https://user-images.githubusercontent.com/80338970/199357533-d803c311-e02a-4d89-8d17-c61802c57827.jpg"/>
 
 </div>
