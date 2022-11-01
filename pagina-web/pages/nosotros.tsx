@@ -24,7 +24,7 @@ const nosotros: NextPage = () => {
         <Row className="w-full">
           <ContactCard
             person="Lucas Herrera"
-            text="Materiales y Estructura"
+            text="Materiales y Documentación"
             github="https://github.com/lucas-le-herrera"
             email="mailto:lucassherreraa2003@gmail.com"
             ig="https://www.instagram.com/lucas.herreraa.19"
@@ -36,17 +36,17 @@ const nosotros: NextPage = () => {
             github="https://github.com/MiqueasVanore"
             email="mailto:vnmiqueas@gmail.com"
             ig="https://www.instagram.com/miqueasvn"
-            li=""
+            li="#"
           />
         </Row>
         <Row className="w-full">
           <ContactCard
-            person="Thomas Kaufmann"
-            text="PCB y microcontrolador"
-            github="#"
-            email="#"
-            ig="#"
-            li=""
+            person="Joaquín Martínez"
+            text="Planos y Distribución de cables"
+            github="https://github.com/joacozape04"
+            email="mailto:joaquinosmartinez@gmail.com"
+            ig="https://www.instagram.com/joaquinosmartinez"
+            li="#"
           />
           <ContactCard
             person="Ramiro Mariani"
@@ -68,11 +68,11 @@ const nosotros: NextPage = () => {
           />
           <ContactCard
             person="Agustín Esquivel"
-            text="Esquemáticos y placas de circuito impreso"
+            text="Diseño de la placa de control y Esquemáticos"
             github="https://github.com/Agustin-Esquivel04"
             email="mailto:esquivel.agustin04@gmail.com"
             ig="https://www.instagram.com/agus_esquivel_1"
-            li=""
+            li="#"
           />
         </Row>
       </div>
