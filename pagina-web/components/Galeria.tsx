@@ -16,19 +16,27 @@ export default function Galeria({ images }) {
   };
 
   return (
-    <div className="grid md:grid-cols-2 grid-cols-1 md:gap-2 gap-4">
-      {images &&
-        images.map((imageUrl, index) => (
-          <VisibilitySensor
-            key={index}
-            partialVisibility={true}
-            offset={{ bottom: 80 }}
-            onChange={(isVisible) => imageVisibleChange(index, isVisible)}
-          >
-            <GaleriaCard imageUrl={imageUrl} show={imagesShownArray[index]} />
-          </VisibilitySensor>
-        ))}
-    </div>
+    <>
+      <div className="mb-4 md:w-[50%]">
+        <GaleriaCard
+          imageUrl="000Smart Toolbox en las ONIET.jpg"
+          show={true}
+        />
+      </div>
+      <div className="grid md:grid-cols-2 grid-cols-1 md:gap-2 gap-4">
+        {images &&
+          images.map((imageUrl, index) => (
+            <VisibilitySensor
+              key={index}
+              partialVisibility={true}
+              offset={{ bottom: 80 }}
+              onChange={(isVisible) => imageVisibleChange(index, isVisible)}
+            >
+              <GaleriaCard imageUrl={imageUrl} show={imagesShownArray[index]} />
+            </VisibilitySensor>
+          ))}
+      </div>
+    </>
   );
 }
 
