@@ -32,7 +32,7 @@ const funcionamiento: NextPage = () => {
         </h3>
         <img
           className="my-5 lg:w-1/2 rounded-lg img-fluid"
-          src={"pictures/10Planificando las secciones.jpg"}
+          src={"caja.jpg"}
         />
       </div>
       <div className="h-1/2 max-w-full">
