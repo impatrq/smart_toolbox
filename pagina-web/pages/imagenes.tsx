@@ -16,7 +16,7 @@ const imagenes: NextPage = ({ pictures }: { pictures: String[] }) => {
           </h1>
         </div>
       </div>
-      <div className="p-10">
+      <div className="p-10 grid place-items-center">
         <Galeria images={images} />
       </div>
     </div>

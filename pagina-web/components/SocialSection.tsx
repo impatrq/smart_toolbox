@@ -25,7 +25,7 @@ export default function SocialSection() {
             className="text-center mx-3"
             style={{ width: "100%", height: "auto" }}
           >
-            <a href="mailto:Smart.Toolbox@proton.me">
+            <a href="mailto:smart.toolbox@proton.me">
               <EmailIcon htmlColor="#ffffffb3" sx={sx} fontSize="large" />
             </a>
           </Col>
