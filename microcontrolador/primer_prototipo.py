@@ -85,11 +85,9 @@ def connectWifi():
     wlan = network.WLAN(network.STA_IF)
     wlan.active(True)
     if not wlan.isconnected():
-        print("connecting to network...")
         wlan.connect(WIFI_SSID, WIFI_PASSWD)
         while not wlan.isconnected():
             time.sleep_ms(1000)
-    print("network config:", wlan.ifconfig())
 
 
 # REST API get method
@@ -129,7 +127,6 @@ connectWifi()
 while True:
 
     while not getReq("guardar"):
-        print("Waiting for the store signal...")
         patchReq(f"cajas/{toolbox}", {"missing_tools": "", "state": False})
         time.sleep(10)  # Waits until the store signal arrives
 
@@ -143,15 +140,12 @@ while True:
         if tool.sel[0] == 1:
             s3.on()
 
-        print(tool.sel)
-
         # ! This delay ensures an effective multiplexer switching
 
         if not sig.value():
             # * The tool is not in its place
             if not checkDuplicates(tool.nombre):
                 missing_tools.append(tool.nombre)
-                print(tool.nombre)
         else:
             # * The tool is in its place
             if checkDuplicates(tool.nombre):
@@ -168,4 +162,3 @@ while True:
         alarm.off()
 
     patchReq(f"cajas/{toolbox}", {"missing_tools": " | ".join(missing_tools), "state": True})
-    print(missing_tools)
