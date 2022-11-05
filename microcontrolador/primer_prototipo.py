@@ -17,11 +17,8 @@ DB_ID = ""
 # Workspace
 area_trabajo = "sector1"
 
-# DB Url Id
-dbId = DB_ID
-
 # DB Url
-dbURL = f"https://smart-toolbox-{dbId}-default-rtdb.firebaseio.com"
+dbURL = f"https://smart-toolbox-{DB_ID}-default-rtdb.firebaseio.com"
 
 # Toolbox Number
 toolbox = "14537934"
