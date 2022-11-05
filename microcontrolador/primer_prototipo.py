@@ -17,14 +17,11 @@ DB_ID = ""
 # Workspace
 area_trabajo = "sector1"
 
-# DB Url Id
-dbId = DB_ID
-
 # DB Url
-dbURL = f"https://smart-toolbox-{dbId}-default-rtdb.firebaseio.com"
+dbURL = f"https://smart-toolbox-{DB_ID}-default-rtdb.firebaseio.com"
 
 # Toolbox Number
-toolbox = "12537865"
+toolbox = "14537934"
 
 # Headers
 HTTP_HEADERS = {"Content-Type": "application/json"}
@@ -34,8 +31,11 @@ s0 = Pin(17, Pin.OUT)
 s1 = Pin(16, Pin.OUT)
 s2 = Pin(4, Pin.OUT)
 s3 = Pin(2, Pin.OUT)
-sig = Pin(15, Pin.IN)
 alarm = Pin(13, Pin.OUT)
+sig = Pin(15, Pin.IN)
+c1 = Pin(19,Pin.IN)
+c2 = Pin(18,Pin.IN)
+c3 = Pin(21,Pin.IN)
 
 alarm.off()
 missing_tools = []
@@ -52,13 +52,13 @@ class Tools:
 martillo = Tools(0, [0, 0, 0, 0], "Martillo")
 fuerza = Tools(1, [0, 0, 0, 1], "Pinza de fuerza")
 cutter = Tools(2, [0, 0, 1, 0], "Cutter")
-allen = Tools(3, [0, 0, 1, 1], "Llaves allen")
+torx = Tools(3, [0, 0, 1, 1], "Llaves torx")
 pelacables = Tools(4, [0, 1, 0, 0], "Pelacables")
 punta1 = Tools(5, [0, 1, 0, 1], "Pinza de punta 1")
 alicates = Tools(6, [0, 1, 1, 0], "Alicates")
 punta2 = Tools(7, [0, 1, 1, 1], "Pinza de punta 2")
 loro = Tools(8, [1, 0, 0, 0], "Pico de loro")
-inglesa = Tools(9, [1, 0, 0, 1], "Llave inglesa")
+francesa = Tools(9, [1, 0, 0, 1], "Llave francesa")
 frenar = Tools(10, [1, 0, 1, 0], "Pinza de frenar")
 phillips1 = Tools(11, [1, 0, 1, 1], "Destornillador Phillips 1")
 plano1 = Tools(12, [1, 1, 0, 0], "Destornillador Plano 1")
@@ -71,17 +71,20 @@ metrica = Tools(15, [1, 1, 1, 1], "Cinta metrica")
 def checkDuplicates(tool):
     return tool in missing_tools
 
+def checkContacts():
+    if not c1.value() and not c2.value() and not c3.value():
+        return True
+    else:
+        return False
 
 # Connect to the wifi network
 def connectWifi():
     wlan = network.WLAN(network.STA_IF)
     wlan.active(True)
     if not wlan.isconnected():
-        print("connecting to network...")
         wlan.connect(WIFI_SSID, WIFI_PASSWD)
         while not wlan.isconnected():
             time.sleep_ms(1000)
-    print("network config:", wlan.ifconfig())
 
 
 # REST API get method
@@ -99,13 +102,13 @@ tools = [
     martillo,
     fuerza,
     cutter,
-    allen,
+    torx,
     pelacables,
     punta1,
     alicates,
     punta2,
     loro,
-    inglesa,
+    francesa,
     frenar,
     phillips1,
     plano1,
@@ -121,7 +124,6 @@ connectWifi()
 while True:
 
     while not getReq("guardar"):
-        print("Waiting for the store signal...")
         patchReq(f"cajas/{toolbox}", {"missing_tools": "", "state": False})
         time.sleep(10)  # Waits until the store signal arrives
 
@@ -135,30 +137,25 @@ while True:
         if tool.sel[0] == 1:
             s3.on()
 
-        print(tool.sel)
-
         # ! This delay ensures an effective multiplexer switching
-        time.sleep_ms(100)
 
         if not sig.value():
             # * The tool is not in its place
             if not checkDuplicates(tool.nombre):
                 missing_tools.append(tool.nombre)
-                alarm.on()
-                print(tool.nombre)
         else:
             # * The tool is in its place
             if checkDuplicates(tool.nombre):
                 missing_tools.remove(tool.nombre)
-                alarm.off()
 
-        time.sleep_ms(50)
         s0.off()
         s1.off()
         s2.off()
         s3.off()
-        time.sleep_ms(50)
 
-    time.sleep(1)
+    if missing_tools != [] and checkContacts():
+        alarm.on()
+    else:
+        alarm.off()
+
     patchReq(f"cajas/{toolbox}", {"missing_tools": " | ".join(missing_tools), "state": True})
-    print(missing_tools)
