@@ -1,0 +1,25 @@
+{
+  "sector1": {
+    "cajas": {
+      "12537865": {
+        "missing_tools": "",
+        "state": false
+      },
+      "14537934": {
+        "missing_tools": "Pinza de punta 2",
+        "state": true
+      }
+    },
+    "guardar": true,
+    "personas": {
+      "jose": {
+        "caja": 14537934,
+        "tareas": "Main battery Cd-Ni capacity test | Instalación de CVR | Instalación de FDR"
+      },
+      "ramiro": {
+        "caja": 14537934,
+        "tareas": "Cambio de aceite motor | Alineación y balanceo | Cambio de correa de distribución | Carga de aire acondicionado | Checkeo pantalla LED"
+      }
+    }
+  }
+}
