@@ -1,6 +1,6 @@
 <div align="center">
 
-# [Smart Toolbox](https://www.smart-toolbox.tk/)
+# [Smart Toolbox](https://smart-toolbox.vercel.app/)
 
 <img src="https://user-images.githubusercontent.com/80327788/190393898-d13cce88-e29e-45da-8dda-b5642c21e2eb.png" height="400" width="400" />
 
@@ -8,7 +8,7 @@
 
 | Página web | Email | Instagram |
 |------------|-------|-----------|
-|[smart-toolbox.tk](https://www.smart-toolbox.tk/)|smart.toolbox@proton.me|[@smart.toolbox.2022](https://www.instagram.com/smart.toolbox.2022)|
+|[smart-toolbox.vercel.app](https://smart-toolbox.vercel.app/)|smart.toolbox@proton.me|[@smart.toolbox.2022](https://www.instagram.com/smart.toolbox.2022)|
 
 &nbsp;
 
@@ -99,6 +99,6 @@ Somos un grupo de alumnos de E.E.S.T. N°7 "Taller Regional Quilmes" (IMPA).
 
 ### 🥇 Primer puesto en Prototipos II 🥇
 
-<img src="https://user-images.githubusercontent.com/80338970/199357533-d803c311-e02a-4d89-8d17-c61802c57827.jpg"/>
+<img src="https://user-images.githubusercontent.com/80338970/202852798-6fd5099c-f184-4d54-8afa-1f99391e9436.jpg"/>
 
 </div>
