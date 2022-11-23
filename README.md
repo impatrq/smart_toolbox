@@ -27,34 +27,6 @@ Este proyecto surgió como una variación de otro llamado _Tool Finder_. La prin
 Durante la jornada de trabajo, el operario _dispondrá de todas las tareas a realizar en el día en la aplicación móvil_. Estas serán cargadas a través de una página web.
 Después de terminar la jornada de trabajo, el operario deberá guardar todas las herramientas en la caja y, de este modo, evitar el extravío de éstas. En el caso contrario, al cerrarse alguno de los cajones, el sistema _detectará que faltan herramientas_, avisándole de esto mediante un sonido. Los utensilios faltantes se podrán _visualizar en una aplicacion móvil_ vinculada a la caja y en una _interfaz gráfica_.
 
-## ¿Quiénes somos?
-
-Somos un grupo de alumnos de E.E.S.T. N°7 "Taller Regional Quilmes" (IMPA).
-
-### Esquivel, Agustín
-
---> 📧 esquivel.agustin04@gmail.com
-
-### Herrera, Lucas
-
---> 📧 lucassherreraa2003@gmail.com
-
-### Mariani, Ramiro
-
---> 📧 ramiromariani99@gmail.com
-
-### Martínez Joaquín
-
---> 📧 joaquinosmartinez@gmail.com
-
-### Torres, Federico
-
---> 📧 federicotorres233@protonmail.com
-
-### Vanore, Miqueas
-
---> 📧 vnmiqueas@gmail.com
-
 ## Tecnologías utilizadas
 
 ### Aplicación móvil
@@ -92,6 +64,40 @@ Somos un grupo de alumnos de E.E.S.T. N°7 "Taller Regional Quilmes" (IMPA).
 ### Planos
 
 - AutoCAD
+
+## ¿Quiénes somos?
+
+Somos un grupo de alumnos de E.E.S.T. N°7 "Taller Regional Quilmes" (IMPA).
+
+### Esquivel, Agustín
+
+--> 📧 esquivel.agustin04@gmail.com
+
+### Herrera, Lucas
+
+--> 📧 lucassherreraa2003@gmail.com
+
+### Mariani, Ramiro
+
+--> 📧 ramiromariani99@gmail.com
+
+### Martínez Joaquín
+
+--> 📧 joaquinosmartinez@gmail.com
+
+### Torres, Federico
+
+--> 📧 federicotorres233@protonmail.com
+
+### Vanore, Miqueas
+
+--> 📧 vnmiqueas@gmail.com
+
+<div align="center">
+
+<img src="https://user-images.githubusercontent.com/80338247/203585908-ed254af7-ff46-4f8a-ba5b-32ffd2410b9c.jpg" width="450"/>
+
+</div>
 
 ## Logros
 
